@@ -2,7 +2,7 @@
 
 Explore James Webb Space Telescope observations through interactive cards showing what Webb captured, where it was, and where it pointed.
 
-Choose another public, calibrated NIRCam exposure to see its monochrome image, its field in the constellation and Webb's position at mid-exposure. This independent project is at the design stage. The local experiments have produced exposure images, metadata and visual metrics. The renderer, collector, public service and portfolio control are planned.
+Choose another public, calibrated NIRCam exposure to see its monochrome image, its field in the constellation and Webb's position at mid-exposure. The local synthetic orbital playground is implemented. Science-image rendering, collection, public service and portfolio controls remain planned.
 
 ![Design reference showing a July exposure with a constellation overview and detail above the orbital diagram](july_loc_zoom.png)
 
@@ -16,7 +16,7 @@ Both surfaces use one catalog and one TypeScript SVG renderer. A Python collecto
 
 ## Reproducing the work
 
-Start with the [architecture and selection algorithm](docs/architecture.md), [card geometry and preload contract](docs/card-design.md) and [seven demonstrable increments](docs/increments.md). The first runnable milestone will be a local orbit playground using synthetic vectors. Its launch command will appear here once tested. Later real-data runs will record product identity, processing versions, time and frame choices, catalog revisions and source credits. Temporary local experiments are described in the design notes for comparison.
+Start with the [architecture and selection algorithm](docs/architecture.md), [card geometry and preload contract](docs/card-design.md) and [seven demonstrable increments](docs/increments.md). From the repository root, run `npm install` and `npm run dev`, then open the local URL printed by Vite. Run `npm run build` for a production build. The playground uses synthetic vectors and needs no cloud or astronomy service. Later real-data runs will record product identity, processing versions, time and frame choices, catalog revisions and source credits.
 
 The playground will run without cloud accounts. Hosted experiments will require a GitHub profile and Actions setup, a Cloudflare account with a Worker and private R2 Standard bucket, and access to the portfolio for shortcode integration. Dependency pins, local setup and deployment commands belong to the increments that verify them.
 

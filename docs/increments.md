@@ -1,10 +1,10 @@
 # Seven vertical increments
 
-All seven are planned. The checkout contains design references and experimental collector evidence. Each demonstration below describes a future runnable outcome. Add its exact tested command to the [README](../README.md) when the slice works.
+Increment 1 is implemented and validated through repeated owner review of the presets, phase controls, compact README view, label placement and orbital diagrams. Increments 2–7 are planned. The checkout contains design references and experimental collector evidence. Each remaining demonstration describes its future runnable outcome. Verified local commands live in the [README](../README.md).
 
 ## 1. Local orbital playground
 
-**Depends on** the [scene and camera contract](card-design.md) and three seasonal references. Build a pure TypeScript orbital renderer and a local HTML view. Both the controls and the later headless card call the same renderer with resolved scene vectors and tracks. Label the view synthetic. Provide March, July and November presets and reset to the selected preset.
+**Depends on** the [scene and camera contract](card-design.md) and three seasonal references. Implemented as a pure TypeScript scene generator and SVG renderer with a local HTML view. The controls and future headless card call the same renderer with resolved scene vectors and tracks. The view is labeled synthetic and provides March, July and November presets and reset.
 
 | Controlled concept | Labeled range inputs with live values |
 |---|---|
@@ -13,9 +13,9 @@ All seven are planned. The checkout contains design references and experimental 
 | Webb phase around L2 | 0–360° around the synthetic local track |
 | Webb pointing direction | Ecliptic longitude 0–360° **and** latitude −90 to +90° |
 
-**Demonstrate** by launching the local playground, selecting a preset and adjusting each of the five native keyboard-operable sliders. Convert longitude λ and latitude β to (cos β cos λ, cos β sin λ, sin β), converting degrees to radians first. Regenerate synthetic vectors/tracks on input and redraw live without NASA or cloud access. Earth carries its local system, Moon phase moves the Moon, Webb phase moves the telescope, and pointing alone changes only the direction indicator.
+**Demonstrate** with `npm install` and `npm run dev` from the repository root. Select a preset and adjust each of the five native keyboard-operable sliders. Longitude λ and latitude β become (cos β cos λ, cos β sin λ, sin β), with degrees converted to radians. The app regenerates synthetic vectors/tracks and redraws without NASA or cloud access. Earth carries its local system, Moon phase moves the Moon, Webb phase moves the telescope, and pointing alone changes only the direction indicator.
 
-**Accept** after sweeping full phases and endpoints, cardinal directions, high latitudes and nearly camera-aligned directions in both senses. Check apparent conjunctions and labels at panel edges at desktop and mobile reference widths. Confirm the locally magnified anchors stay on their curves, symbols remain in view, labels are legible, keyboard focus persists and reset reproduces the preset. Capture representative configurations for visual regression. A slider that drags the wrong body, a flattened 3D direction or a clipped marker fails this slice.
+**Accept** after sweeping full phases and endpoints, cardinal directions, high latitudes and nearly camera-aligned directions in both senses. Check apparent conjunctions and labels at panel edges at desktop and mobile reference widths. Confirm that the annual Earth ellipse stays horizontal around the centered Sun, the Moon and Webb markers follow their visible schematic ellipses, symbols remain in view, labels are legible, keyboard focus persists and reset reproduces the preset. Month labels disappear when the Earth and lunar group nears their positions. L2 remains on the antisolar side of Earth, and Webb's ellipse has its major axis perpendicular to the Sun–Earth vector. Build succeeds with `npm run build`. Capture representative configurations for visual regression. A slider that drags the wrong body, a flattened 3D direction or a clipped marker fails this slice.
 
 ## 2. Two cards through the real GitHub profile
 

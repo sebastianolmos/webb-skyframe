@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b10" />
+    <title>Webb Sightline · Orbital playground</title>
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <a class="wordmark" href="./">webb<span>·</span>sightline</a>
+        <span class="status"><i></i> Synthetic scene</span>
+      </header>
+      <section class="intro">
+        <p class="eyebrow">ORBITAL STUDY · LOCAL PLAYGROUND</p>
+        <h1>A telescope, in context.</h1>
+        <p class="lede">Explore how Webb moves around the Sun–Earth L2 region. Every position here is synthetic.</p>
+      </section>
+      <section class="workspace" aria-label="Orbital scene and controls">
+        <div class="scene-panel">
+          <div class="scene-heading"><span>HELIOCENTRIC VIEW</span><span class="scene-date" id="scene-date"></span></div>
+          <div class="view-switch" role="group" aria-label="Preview size">
+            <button type="button" id="large-mode" aria-pressed="true">Large view</button>
+            <button type="button" id="compact-mode" aria-pressed="false">README size</button>
+          </div>
+          <div id="orbit-scene"></div>
+          <div class="legend" aria-label="Diagram legend">
+            <span><i class="earth-key"></i>Earth orbit</span><span><i class="moon-key"></i>Moon</span><span><i class="webb-key"></i>Webb / L2</span><span><i class="point-key"></i>Pointing</span>
+          </div>
+          <p class="scale-note">Earth and local paths use separate diagram scales · Orbit shapes are illustrative</p>
+        </div>
+        <aside class="controls" aria-label="Scene controls">
+          <div class="control-top"><span class="eyebrow">SCENE CONFIGURATION</span><button id="reset" class="reset" type="button">Reset ↺</button></div>
+          <label class="select-label" for="preset">Reference position</label>
+          <select id="preset">
+            <option value="march">March · below the Sun</option>
+            <option value="july">July · right of the Sun</option>
+            <option value="november">November · above the Sun</option>
+          </select>
+          <div class="control-group">
+            <div class="control-title"><label for="earth-phase">Earth annual phase</label><output id="earth-value" for="earth-phase"></output></div>
+            <input id="earth-phase" type="range" min="0" max="360" step="1" />
+            <div class="range-ends"><span>0°</span><span>360°</span></div>
+          </div>
+          <div class="control-group">
+            <div class="control-title"><label for="moon-phase">Moon geocentric phase</label><output id="moon-value" for="moon-phase"></output></div>
+            <input id="moon-phase" type="range" min="0" max="360" step="1" />
+            <div class="range-ends"><span>0°</span><span>360°</span></div>
+          </div>
+          <div class="control-group">
+            <div class="control-title"><label for="webb-phase">Webb phase around L2</label><output id="webb-value" for="webb-phase"></output></div>
+            <input id="webb-phase" type="range" min="0" max="360" step="1" />
+            <div class="range-ends"><span>0°</span><span>360°</span></div>
+          </div>
+          <div class="control-group pointing">
+            <div class="control-title"><label for="longitude">Pointing · ecliptic longitude</label><output id="longitude-value" for="longitude"></output></div>
+            <input id="longitude" type="range" min="0" max="360" step="1" />
+            <div class="range-ends"><span>0°</span><span>360°</span></div>
+            <div class="control-title second"><label for="latitude">Pointing · ecliptic latitude</label><output id="latitude-value" for="latitude"></output></div>
+            <input id="latitude" type="range" min="-90" max="90" step="1" />
+            <div class="range-ends"><span>−90°</span><span>+90°</span></div>
+          </div>
+        </aside>
+      </section>
+      <footer>Independent project · Synthetic positions for design exploration</footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
