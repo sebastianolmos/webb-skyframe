@@ -1,0 +1,49 @@
+# Local experiments and their working data
+/probar_webb.py
+/recalcular_metricas_webb.py
+/webb_aptas_con_descartes.py
+/jw09438007001_03103_00002_nrca3_cal.json
+/jw09438007001_03103_00002_nrca3_cal.png
+/local-reference/
+/salida_webb/
+/salida_webb_exp_*/
+/runs/
+/downloads/
+/mastDownload/
+
+# Python environments, packages and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.cache/
+
+# JavaScript, TypeScript and Wrangler
+node_modules/
+*.tsbuildinfo
+.wrangler/
+dist/
+build/
+coverage/
+
+# Local bindings and secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# Downloaded science products. Small intentional fixtures may be versioned.
+*.fits
+*.fits.gz
+*.fits.fz
+!**/fixtures/**/*.fits
+!**/fixtures/**/*.fits.gz
+!**/fixtures/**/*.fits.fz
