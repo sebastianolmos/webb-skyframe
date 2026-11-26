@@ -2,7 +2,7 @@
 
 Explore James Webb Space Telescope observations through interactive cards showing what Webb captured, where it was, and where it pointed.
 
-Choose another public, calibrated NIRCam exposure to see its monochrome image, its field in the constellation and Webb's position at mid-exposure. The local synthetic orbital playground is implemented. Science-image rendering, collection, public service and portfolio controls remain planned.
+Choose another public, calibrated NIRCam exposure to see its monochrome image, its field in the constellation and Webb's position at mid-exposure. The local synthetic orbital playground and shared SVG card renderer are implemented. The synthetic GitHub Worker is deployed with a private R2 bucket; after adding no-store cache directives, owner checks reported 5-7 second Camo updates with Age 0 and successful clicks on desktop and phone. Local checks now cover failure preservation and overlapping requests. The deployed Worker passed HTTP and validator checks; a ten-run Camo sample measured 5.4-7.0 second updates, with matching origin hashes. Increment 2 is validated with local failure and concurrency checks, deployed concurrent requests, and the ten-run timing sample. Real-science rendering, collection, catalog publication and portfolio controls remain planned.
 
 ![Design reference showing a July exposure with a constellation overview and detail above the orbital diagram](july_loc_zoom.png)
 
