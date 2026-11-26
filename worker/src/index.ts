@@ -56,7 +56,7 @@ export default {
         const previousId = previous?.customMetadata?.id;
         const available = CARD_FIXTURES.filter((fixture) => fixture.details.id !== previousId);
         const selected = available[randomIndex(available.length)];
-        const svg = renderCard(selected.scene, selected.details, photoDataUrl);
+        const svg = renderCard(selected.scene, selected.details, photoDataUrl, selected.sky);
         if (!svg.startsWith("<svg ") || !svg.endsWith("</svg>") || !svg.includes("data:image/png;base64,")) {
           throw new Error("Rendered fixture is not a complete self-contained PNG-backed SVG");
         }

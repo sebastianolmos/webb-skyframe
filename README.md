@@ -18,6 +18,8 @@ Both surfaces use one catalog and one TypeScript SVG renderer. A Python collecto
 
 Start with the [architecture and selection algorithm](docs/architecture.md), [card geometry and preload contract](docs/card-design.md) and [seven demonstrable increments](docs/increments.md). From the repository root, run `npm install` and `npm run dev`, then open the local URL printed by Vite. Run `npm run build` for a production build. The playground uses synthetic vectors and needs no cloud or astronomy service. Later real-data runs will record product identity, processing versions, time and frame choices, catalog revisions and source credits.
 
+To regenerate the five synthetic celestial card captures, install root dependencies and run `npm run render:sky-fixtures`. The script uses the retained `worker/src/fixtures/sample-photo.bin` raster and `synthetic-sky-1` inputs, then writes PNGs to `docs/evidence/increment-3/`. It needs a local Chrome/Chromium executable; set `BROWSER_BIN` if it is not found automatically. Worker checks use the locked Worker dependencies: from `worker/`, run `npm install` once, then `npm test -- --run`.
+
 The playground will run without cloud accounts. Hosted experiments will require a GitHub profile and Actions setup, a Cloudflare account with a Worker and private R2 Standard bucket, and access to the portfolio for shortcode integration. Dependency pins, local setup and deployment commands belong to the increments that verify them.
 
 ## License and credits
