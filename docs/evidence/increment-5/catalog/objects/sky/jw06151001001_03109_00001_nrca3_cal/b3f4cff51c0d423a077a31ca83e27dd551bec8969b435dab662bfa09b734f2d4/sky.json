@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "resolved-sky-1",
+  "scene": {
+    "center": [
+      290.9282004746206,
+      14.523042198233096
+    ],
+    "footprint": [
+      [
+        290.9331550646843,
+        14.534727255989461
+      ],
+      [
+        290.94038794148446,
+        14.518217290921191
+      ],
+      [
+        290.9232100292176,
+        14.511442725977563
+      ],
+      [
+        290.91616791314834,
+        14.527760079009845
+      ]
+    ],
+    "figureEdges": [
+      [
+        [
+          296.5649,
+          10.6133
+        ],
+        [
+          297.6958,
+          8.8683
+        ]
+      ],
+      [
+        [
+          297.6958,
+          8.8683
+        ],
+        [
+          298.8283,
+          6.4068
+        ]
+      ],
+      [
+        [
+          298.8283,
+          6.4068
+        ],
+        [
+          302.8262,
+          -0.8215
+        ]
+      ],
+      [
+        [
+          302.8262,
+          -0.8215
+        ],
+        [
+          298.1182,
+          1.0057
+        ]
+      ],
+      [
+        [
+          298.1182,
+          1.0057
+        ],
+        [
+          291.3746,
+          3.1148
+        ]
+      ],
+      [
+        [
+          291.3746,
+          3.1148
+        ],
+        [
+          286.3525,
+          13.8635
+        ]
+      ],
+      [
+        [
+          286.3525,
+          13.8635
+        ],
+        [
+          297.6958,
+          8.8683
+        ]
+      ],
+      [
+        [
+          297.6958,
+          8.8683
+        ],
+        [
+          291.3746,
+          3.1148
+        ]
+      ],
+      [
+        [
+          291.3746,
+          3.1148
+        ],
+        [
+          286.5622,
+          -4.8826
+        ]
+      ]
+    ],
+    "figureStars": [
+      [
+        286.3525,
+        13.8635
+      ],
+      [
+        286.5622,
+        -4.8826
+      ],
+      [
+        291.3746,
+        3.1148
+      ],
+      [
+        296.5649,
+        10.6133
+      ],
+      [
+        297.6958,
+        8.8683
+      ],
+      [
+        298.1182,
+        1.0057
+      ],
+      [
+        298.8283,
+        6.4068
+      ],
+      [
+        302.8262,
+        -0.8215
+      ]
+    ],
+    "overviewStars": [],
+    "detail": {
+      "center": [
+        289.40001801140716,
+        14.31288120399827
+      ],
+      "sizeDeg": [
+        5.0,
+        5.0
+      ],
+      "corners": [
+        [
+          291.9516116163848,
+          11.80149780058894
+        ],
+        [
+          286.84842440642956,
+          11.80149780058894
+        ],
+        [
+          286.7910156902042,
+          16.79643539622226
+        ],
+        [
+          292.00902033261013,
+          16.79643539622226
+        ]
+      ],
+      "stars": [],
+      "segments": []
+    }
+  },
+  "region": "Aquila",
+  "abbreviation": "Aql",
+  "reference": [
+    290.92820023587575,
+    14.523041801211665
+  ],
+  "centerOffsetArcsec": 0.0016538100693775128,
+  "catalog": {
+    "stars": {
+      "source": "HYG v4.1 (audited, not rendered in this card)",
+      "revision": "3bf37f4b2d5460e1278286320d1d62fab9b493c1",
+      "sha256": "2b4d54f0a83db866c6d2eda76cd78bbcc713cc14e1ce8812093fb3ee586df673",
+      "sourceEpoch": "J2000.0",
+      "frame": "ICRS",
+      "magnitude": "apparent visual",
+      "selected": 0,
+      "detailSelected": 0,
+      "displayPolicy": "constellation figure only; no contextual catalog stars",
+      "license": "CC BY-SA 4.0"
+    },
+    "figures": {
+      "source": "d3-celestial constellations.lines.json",
+      "revision": "7e720a3de062059d4c5400a379146a601d9010e0",
+      "sha256": "294f66bef5d5cf50b1e17f16d2efa1d97a15131612c68dd935adef6e7373e13c",
+      "sourceCoordinates": "RA degrees signed about zero; Dec degrees",
+      "selectedFeatures": [
+        "Aql"
+      ],
+      "detailFeatures": [],
+      "license": "BSD-3-Clause"
+    },
+    "constellationClassifier": {
+      "implementation": "astropy.coordinates.get_constellation",
+      "version": "8.0.3",
+      "reference": "Roman 1987 / Delporte B1875"
+    }
+  }
+}

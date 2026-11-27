@@ -1,0 +1,235 @@
+{
+  "schemaVersion": "published-catalog-1",
+  "generation": "published-demo-1",
+  "renderVersion": "real-card-1",
+  "entries": [
+    {
+      "id": "jw06662007001_03101_00002_nrcblong_cal",
+      "cardVersion": "1fa14fe590568cd85dd79fe0d4396a590f9a69607e5bd634025cbb4c895d29d2",
+      "versions": {
+        "schema": "real-exposure-1",
+        "data": "real-sky-1",
+        "render": "real-card-1",
+        "filter": "visual-filter-1",
+        "catalog": "published-demo-1"
+      },
+      "objectKeys": {
+        "observation": "observation/jw06662007001_03101_00002_nrcblong_cal/81c3daf9cc61c1460511284fc8a99f421d9aecc7cfe3799c5abb7cd4db5c1484/observation.json",
+        "photo": "photo/jw06662007001_03101_00002_nrcblong_cal/3136cb99919e8f76faba7b96ce4fa23c6a14d75b0c75b0f43fc9dd87a3f582d9/photo-1024.png",
+        "sky": "sky/jw06662007001_03101_00002_nrcblong_cal/e96e792a613152cf8e4040aa808344e3abd7daa33693c40c0e9dc0df4b0d2ddb/sky.json",
+        "orbit": "orbit/jw06662007001_03101_00002_nrcblong_cal/92da9fb4ad076ff8eafdf40fb01c38e0e7d0c5c929e1e1a9cb72c456a21b6962/orbit.json"
+      },
+      "digests": {
+        "observation": {
+          "bytes": 5381,
+          "sha256": "81c3daf9cc61c1460511284fc8a99f421d9aecc7cfe3799c5abb7cd4db5c1484"
+        },
+        "photo": {
+          "bytes": 728568,
+          "sha256": "3136cb99919e8f76faba7b96ce4fa23c6a14d75b0c75b0f43fc9dd87a3f582d9"
+        },
+        "sky": {
+          "bytes": 3436,
+          "sha256": "e96e792a613152cf8e4040aa808344e3abd7daa33693c40c0e9dc0df4b0d2ddb"
+        },
+        "orbit": {
+          "bytes": 19432,
+          "sha256": "92da9fb4ad076ff8eafdf40fb01c38e0e7d0c5c929e1e1a9cb72c456a21b6962"
+        }
+      },
+      "alt": "James Webb Space Telescope NIRCam exposure of IC 10 X-1 on 2025-01-30; NRCBLONG F277W, in Cassiopeia, with Webb's position at exposure midpoint.",
+      "entryTime": "2025-01-30T06:48:28.943Z",
+      "sourceMonth": "2025-01"
+    },
+    {
+      "id": "jw05398287001_02201_00001_nrca4_cal",
+      "cardVersion": "9bf6816ed50c01282a5ee6a9f25d97e97b1fe79e859b998960a202b067d8d65e",
+      "versions": {
+        "schema": "real-exposure-1",
+        "data": "real-sky-1",
+        "render": "real-card-1",
+        "filter": "visual-filter-1",
+        "catalog": "published-demo-1"
+      },
+      "objectKeys": {
+        "observation": "observation/jw05398287001_02201_00001_nrca4_cal/b74dcc97d6a59262fd0666d910b0146da2acbed8e9885abe4231721fb24e1b7a/observation.json",
+        "photo": "photo/jw05398287001_02201_00001_nrca4_cal/f08cb4c7f8520fd00995683a4a5405a5eba7f0309a608509147107a0d533366e/photo-1024.png",
+        "sky": "sky/jw05398287001_02201_00001_nrca4_cal/1b8a33d9d238ea583c23a5b33728526ff9c94bca0a85cfa5935327be045d3a75/sky.json",
+        "orbit": "orbit/jw05398287001_02201_00001_nrca4_cal/d2e3d92109d1541f47484ae9ed00de659ba4dce99cde893ccc7e74a772c7e9bc/orbit.json"
+      },
+      "digests": {
+        "observation": {
+          "bytes": 5380,
+          "sha256": "b74dcc97d6a59262fd0666d910b0146da2acbed8e9885abe4231721fb24e1b7a"
+        },
+        "photo": {
+          "bytes": 597868,
+          "sha256": "f08cb4c7f8520fd00995683a4a5405a5eba7f0309a608509147107a0d533366e"
+        },
+        "sky": {
+          "bytes": 3261,
+          "sha256": "1b8a33d9d238ea583c23a5b33728526ff9c94bca0a85cfa5935327be045d3a75"
+        },
+        "orbit": {
+          "bytes": 19554,
+          "sha256": "d2e3d92109d1541f47484ae9ed00de659ba4dce99cde893ccc7e74a772c7e9bc"
+        }
+      },
+      "alt": "James Webb Space Telescope NIRCam exposure of UNKNOWN on 2025-04-19; NRCA4 F200W, in Sextans, with Webb's position at exposure midpoint.",
+      "entryTime": "2025-04-19T23:41:08.883Z",
+      "sourceMonth": "2025-04"
+    },
+    {
+      "id": "jw06151001001_03109_00001_nrca3_cal",
+      "cardVersion": "7559fb580f8025bd2aa2461f0c161db45768c3d6a3f2b330d70bed8168571c25",
+      "versions": {
+        "schema": "real-exposure-1",
+        "data": "real-sky-1",
+        "render": "real-card-1",
+        "filter": "visual-filter-1",
+        "catalog": "published-demo-1"
+      },
+      "objectKeys": {
+        "observation": "observation/jw06151001001_03109_00001_nrca3_cal/6cca70f243689d149d6bd174b88ab1d188822d80a9f5ceea7d84a4e67f60e176/observation.json",
+        "photo": "photo/jw06151001001_03109_00001_nrca3_cal/f347721028bc19bcafd4edc2c4ef75655c860ef79ea952d895623f0bca7dc016/photo-1024.png",
+        "sky": "sky/jw06151001001_03109_00001_nrca3_cal/b3f4cff51c0d423a077a31ca83e27dd551bec8969b435dab662bfa09b734f2d4/sky.json",
+        "orbit": "orbit/jw06151001001_03109_00001_nrca3_cal/4a070a5312536b32b225f4f56c2035b5bb58d7a31236f32ee15d88a497ba1c0a/orbit.json"
+      },
+      "digests": {
+        "observation": {
+          "bytes": 5366,
+          "sha256": "6cca70f243689d149d6bd174b88ab1d188822d80a9f5ceea7d84a4e67f60e176"
+        },
+        "photo": {
+          "bytes": 558936,
+          "sha256": "f347721028bc19bcafd4edc2c4ef75655c860ef79ea952d895623f0bca7dc016"
+        },
+        "sky": {
+          "bytes": 4137,
+          "sha256": "b3f4cff51c0d423a077a31ca83e27dd551bec8969b435dab662bfa09b734f2d4"
+        },
+        "orbit": {
+          "bytes": 19580,
+          "sha256": "4a070a5312536b32b225f4f56c2035b5bb58d7a31236f32ee15d88a497ba1c0a"
+        }
+      },
+      "alt": "James Webb Space Telescope NIRCam exposure of w51A on 2025-05-06; NRCA3 F140M, in Aquila, with Webb's position at exposure midpoint.",
+      "entryTime": "2025-05-06T16:39:51.443Z",
+      "sourceMonth": "2025-05"
+    },
+    {
+      "id": "jw06434461001_02201_00014_nrcb4_cal",
+      "cardVersion": "7729988864bc6dc373208ea40a33ff9880582640f7ff2bddea0898e51cb491d9",
+      "versions": {
+        "schema": "real-exposure-1",
+        "data": "real-sky-1",
+        "render": "real-card-1",
+        "filter": "visual-filter-1",
+        "catalog": "published-demo-1"
+      },
+      "objectKeys": {
+        "observation": "observation/jw06434461001_02201_00014_nrcb4_cal/7a811e577657bc5ddf70deb3dc64bfed04e2b7eca09d61e5a241b4c4db7acf18/observation.json",
+        "photo": "photo/jw06434461001_02201_00014_nrcb4_cal/20dcc07d9eada87fd19f190fdec142a7059629a3d1ce7293b4f3ce23b67cd57d/photo-1024.png",
+        "sky": "sky/jw06434461001_02201_00014_nrcb4_cal/8321939e6c2a139e5ace2e693c8a718d1b2b8a4131571858464d48eda1c9aa37/sky.json",
+        "orbit": "orbit/jw06434461001_02201_00014_nrcb4_cal/d7d58588016425d654e32a69a67d5fd097864d902fce8fedbe69cf4d43ee9a73/orbit.json"
+      },
+      "digests": {
+        "observation": {
+          "bytes": 5378,
+          "sha256": "7a811e577657bc5ddf70deb3dc64bfed04e2b7eca09d61e5a241b4c4db7acf18"
+        },
+        "photo": {
+          "bytes": 602649,
+          "sha256": "20dcc07d9eada87fd19f190fdec142a7059629a3d1ce7293b4f3ce23b67cd57d"
+        },
+        "sky": {
+          "bytes": 3079,
+          "sha256": "8321939e6c2a139e5ace2e693c8a718d1b2b8a4131571858464d48eda1c9aa37"
+        },
+        "orbit": {
+          "bytes": 19543,
+          "sha256": "d7d58588016425d654e32a69a67d5fd097864d902fce8fedbe69cf4d43ee9a73"
+        }
+      },
+      "alt": "James Webb Space Telescope NIRCam exposure of UNKNOWN on 2025-06-19; NRCB4 F200W, in Sculptor, with Webb's position at exposure midpoint.",
+      "entryTime": "2025-06-19T18:38:39.304Z",
+      "sourceMonth": "2025-06"
+    },
+    {
+      "id": "jw05552014001_05201_00002_nrca3_cal",
+      "cardVersion": "ff876aec5368b81fbb72837b773b41172ab421d09d7d5df8572ebb8100945371",
+      "versions": {
+        "schema": "real-exposure-1",
+        "data": "real-sky-1",
+        "render": "real-card-1",
+        "filter": "visual-filter-1",
+        "catalog": "published-demo-1"
+      },
+      "objectKeys": {
+        "observation": "observation/jw05552014001_05201_00002_nrca3_cal/0afb372dab6c66c41dd77070c78f76951662728d7e06be0f3b4b4ad561dcb2d3/observation.json",
+        "photo": "photo/jw05552014001_05201_00002_nrca3_cal/99b23867a88f589979a7f408ebc9574ef3dafd910dce7c4b0e26cf426a971d79/photo-1024.png",
+        "sky": "sky/jw05552014001_05201_00002_nrca3_cal/e53323ca1cf2dd3b1a4ba5616795694cfa149fa717a4d650b2baedf96e0292df/sky.json",
+        "orbit": "orbit/jw05552014001_05201_00002_nrca3_cal/b9bccc6eebf9506548c60b5f4a688038994f293e4fa974cfa53659e35133f275/orbit.json"
+      },
+      "digests": {
+        "observation": {
+          "bytes": 5375,
+          "sha256": "0afb372dab6c66c41dd77070c78f76951662728d7e06be0f3b4b4ad561dcb2d3"
+        },
+        "photo": {
+          "bytes": 698990,
+          "sha256": "99b23867a88f589979a7f408ebc9574ef3dafd910dce7c4b0e26cf426a971d79"
+        },
+        "sky": {
+          "bytes": 3819,
+          "sha256": "e53323ca1cf2dd3b1a4ba5616795694cfa149fa717a4d650b2baedf96e0292df"
+        },
+        "orbit": {
+          "bytes": 19501,
+          "sha256": "b9bccc6eebf9506548c60b5f4a688038994f293e4fa974cfa53659e35133f275"
+        }
+      },
+      "alt": "James Webb Space Telescope NIRCam exposure of unknown on 2025-07-31; NRCA3 F187N, in Musca, with Webb's position at exposure midpoint.",
+      "entryTime": "2025-07-31T08:02:34.549Z",
+      "sourceMonth": "2025-07"
+    },
+    {
+      "id": "jw08527002001_03101_00003_nrca1_cal",
+      "cardVersion": "99da7a696391ff0e485e2ef38d37003b94df78a52b7116a3af0d5aee13d23a06",
+      "versions": {
+        "schema": "real-exposure-1",
+        "data": "real-sky-1",
+        "render": "real-card-1",
+        "filter": "visual-filter-1",
+        "catalog": "published-demo-1"
+      },
+      "objectKeys": {
+        "observation": "observation/jw08527002001_03101_00003_nrca1_cal/72fbfa4425370b56e24903d6d26e2a1a4a0b7308ae30d51b69a16176d499c9c8/observation.json",
+        "photo": "photo/jw08527002001_03101_00003_nrca1_cal/072e8533fd1a8f6cc5cf890f4dab90506819594de2e37e9f69d913ed6006b2d6/photo-1024.png",
+        "sky": "sky/jw08527002001_03101_00003_nrca1_cal/2963658fdc5cbaf4baaffe881c093726b506a3409830201d406b03fb4683cfdc/sky.json",
+        "orbit": "orbit/jw08527002001_03101_00003_nrca1_cal/6bc63567b5d780b5885b37ecdc0b7c871b74db1bb1fd761d3c7e0b1140541c01/orbit.json"
+      },
+      "digests": {
+        "observation": {
+          "bytes": 5363,
+          "sha256": "72fbfa4425370b56e24903d6d26e2a1a4a0b7308ae30d51b69a16176d499c9c8"
+        },
+        "photo": {
+          "bytes": 616166,
+          "sha256": "072e8533fd1a8f6cc5cf890f4dab90506819594de2e37e9f69d913ed6006b2d6"
+        },
+        "sky": {
+          "bytes": 4536,
+          "sha256": "2963658fdc5cbaf4baaffe881c093726b506a3409830201d406b03fb4683cfdc"
+        },
+        "orbit": {
+          "bytes": 19482,
+          "sha256": "6bc63567b5d780b5885b37ecdc0b7c871b74db1bb1fd761d3c7e0b1140541c01"
+        }
+      },
+      "alt": "James Webb Space Telescope NIRCam exposure of Maki on 2025-08-12; NRCA1 F200W, in Cepheus, with Webb's position at exposure midpoint.",
+      "entryTime": "2025-08-12T18:01:53.458Z",
+      "sourceMonth": "2025-08"
+    }
+  ]
+}

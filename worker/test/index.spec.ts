@@ -7,7 +7,7 @@ const BASE_URL = "https://example.com";
 const IncomingRequest = Request<unknown, IncomingRequestCfProperties>;
 
 async function call(path: string, headers?: HeadersInit, targetEnv: Env = env): Promise<Response> {
-	return worker.fetch(new IncomingRequest(`${BASE_URL}${path}`, { headers }), targetEnv, {} as ExecutionContext);
+	return worker.fetch(new IncomingRequest(`${BASE_URL}${path}`, { headers }), targetEnv);
 }
 
 async function currentSvg(targetEnv: Env = env): Promise<string> {

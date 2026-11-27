@@ -38,6 +38,14 @@ To tune the real sky panel before rendering, edit `REAL_CARD_SKY_PRESENTATION` i
 
 The playground will run without cloud accounts. Hosted experiments will require a GitHub profile and Actions setup, a Cloudflare account with a Worker and private R2 Standard bucket, and access to the portfolio for shortcode integration. Dependency pins, local setup and deployment commands belong to the increments that verify them.
 
+## Increment 5 local catalog package
+
+To recreate the six-entry publication package, run `python scripts/prepare-increment-5-catalog.py` from the repository root. This validates and packages the existing accepted January, April, May, June, July and August 2025 increment-4 bundles under `docs/evidence/increment-5/catalog/`; it performs no archive downloads and makes no remote R2 writes. See the [catalog preparation evidence](docs/evidence/increment-5/catalog/README.md). The published production generation and route results are recorded in [increment 5 production evidence](docs/evidence/increment-5/worker-production.md).
+
+To exercise the Worker routes with those six entries, from `worker/` run `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\seed-increment-5-local-r2.ps1`, `npx.cmd wrangler types`, `npx.cmd tsc --noEmit`, `npx.cmd tsc --noEmit -p test/tsconfig.json`, `npm.cmd test -- --run`, then `npm.cmd run dev -- --local --ip 127.0.0.1 --port 8787`. In a second terminal in `worker/`, run `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-increment-5-local.ps1`. This uses Wrangler's local R2 simulation only. See [local Worker route evidence](docs/evidence/increment-5/worker-local.md) for the observed responses and remaining integration work.
+
+To redeploy the Worker, run `npx.cmd wrangler deploy` from `worker/` after authenticating Wrangler. To publish the checked-in six-entry package to the configured remote R2 bucket, run `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\publish-increment-5-remote-r2.ps1` from `worker/`. The publisher verifies local hashes, uploads and reads back immutable objects, then publishes the manifest and pointer last; it does not delete objects. These remote commands require the authorized Cloudflare account and were exercised for the production deployment recorded in [Worker production evidence](docs/evidence/increment-5/worker-production.md).
+
 ## License and credits
 
 Sebastian Olmos develops webb-skyframe independently of the mission and archive. The [MIT license](LICENSE) covers original software and associated documentation. Science files, derived or credited photos, catalogs, third-party icons, logos and imagery within the mockups retain their source terms. The checkout supplies the design references without individual photo or telescope-art credits. Identify their original creators and terms before reusing those elements in a production card.

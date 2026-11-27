@@ -44,9 +44,9 @@ describe("synthetic celestial panel edge cases", () => {
 
   it("uses the rotated field's short side for the reference-width mode cutoff", () => {
     expect(renderSkyPanel(fixture("wide-field"))).toContain("wide-field · SKY OVERVIEW</text>");
-    expect(renderSkyPanel(fixture("tiny-sparse-crossing"))).toContain("tiny-sparse-crossing · SKY OVERVIEW + DETAIL");
+    expect(renderSkyPanel(fixture("tiny-sparse-crossing"))).toContain("tiny-sparse-crossing · CONSTELLATION + LOCAL REFERENCE");
     const svg = renderSkyPanel(fixture("rotated-footprint"));
-    expect(svg).toContain("rotated-footprint · SKY OVERVIEW + DETAIL");
+    expect(svg).toContain("rotated-footprint · CONSTELLATION + LOCAL REFERENCE");
   });
 
   it("places north up and east left in the gnomonic detail", () => {
@@ -117,7 +117,7 @@ describe("synthetic celestial panel edge cases", () => {
   it("keeps near-pole geometry finite and does not invent stars or segments for an empty detail", () => {
     const sky = fixture("north-pole-empty-detail");
     const svg = renderSkyPanel(sky);
-    expect(svg).toContain("north-pole-empty-detail · SKY OVERVIEW + DETAIL");
+    expect(svg).toContain("north-pole-empty-detail · CONSTELLATION + LOCAL REFERENCE");
     expect(svg).not.toMatch(/NaN|Infinity/);
     expect([...svg.matchAll(/<circle /g)]).toHaveLength(sky.overviewStars.length);
     expect(svg).not.toContain('stroke="#9daecc"');

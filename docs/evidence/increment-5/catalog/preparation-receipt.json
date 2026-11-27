@@ -1,0 +1,54 @@
+{
+  "result": "PASS",
+  "mode": "local publication package; no remote R2 writes",
+  "catalogGeneration": "published-demo-1",
+  "manifestSha256": "c3c0352262eac9d9cb3b8ae5c0dc11ab6920cecb517e7e8d3312763cde14df2c",
+  "manifestKey": "catalog/c3c0352262eac9d9cb3b8ae5c0dc11ab6920cecb517e7e8d3312763cde14df2c.json",
+  "entryCount": 6,
+  "entries": [
+    {
+      "month": "2025-01",
+      "id": "jw06662007001_03101_00002_nrcblong_cal",
+      "sourceBundle": "docs/evidence/increment-4/monthly-exposures/2025-01/jw06662007001_03101_00002_nrcblong_cal",
+      "sourcePngSha256": "3136cb99919e8f76faba7b96ce4fa23c6a14d75b0c75b0f43fc9dd87a3f582d9",
+      "cardVersion": "1fa14fe590568cd85dd79fe0d4396a590f9a69607e5bd634025cbb4c895d29d2"
+    },
+    {
+      "month": "2025-04",
+      "id": "jw05398287001_02201_00001_nrca4_cal",
+      "sourceBundle": "docs/evidence/increment-4/monthly-exposures/2025-04/jw05398287001_02201_00001_nrca4_cal",
+      "sourcePngSha256": "f08cb4c7f8520fd00995683a4a5405a5eba7f0309a608509147107a0d533366e",
+      "cardVersion": "9bf6816ed50c01282a5ee6a9f25d97e97b1fe79e859b998960a202b067d8d65e"
+    },
+    {
+      "month": "2025-05",
+      "id": "jw06151001001_03109_00001_nrca3_cal",
+      "sourceBundle": "docs/evidence/increment-4/monthly-exposures/2025-05/jw06151001001_03109_00001_nrca3_cal",
+      "sourcePngSha256": "f347721028bc19bcafd4edc2c4ef75655c860ef79ea952d895623f0bca7dc016",
+      "cardVersion": "7559fb580f8025bd2aa2461f0c161db45768c3d6a3f2b330d70bed8168571c25"
+    },
+    {
+      "month": "2025-06",
+      "id": "jw06434461001_02201_00014_nrcb4_cal",
+      "sourceBundle": "docs/evidence/increment-4/monthly-exposures/2025-06/jw06434461001_02201_00014_nrcb4_cal",
+      "sourcePngSha256": "20dcc07d9eada87fd19f190fdec142a7059629a3d1ce7293b4f3ce23b67cd57d",
+      "cardVersion": "7729988864bc6dc373208ea40a33ff9880582640f7ff2bddea0898e51cb491d9"
+    },
+    {
+      "month": "2025-07",
+      "id": "jw05552014001_05201_00002_nrca3_cal",
+      "sourceBundle": "docs/evidence/increment-4/monthly-exposures/2025-07/jw05552014001_05201_00002_nrca3_cal",
+      "sourcePngSha256": "99b23867a88f589979a7f408ebc9574ef3dafd910dce7c4b0e26cf426a971d79",
+      "cardVersion": "ff876aec5368b81fbb72837b773b41172ab421d09d7d5df8572ebb8100945371"
+    },
+    {
+      "month": "2025-08",
+      "id": "jw08527002001_03101_00003_nrca1_cal",
+      "sourceBundle": "docs/evidence/increment-4/monthly-exposures/2025-08/jw08527002001_03101_00003_nrca1_cal",
+      "sourcePngSha256": "072e8533fd1a8f6cc5cf890f4dab90506819594de2e37e9f69d913ed6006b2d6",
+      "cardVersion": "99da7a696391ff0e485e2ef38d37003b94df78a52b7116a3af0d5aee13d23a06"
+    }
+  ],
+  "objectCount": 24,
+  "objectBytes": 3974780
+}
