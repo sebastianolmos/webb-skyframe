@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "file": "jw06882014001_04101_00002_nrcblong_cal.fits",
+  "mast_uri": "mast:JWST/product/jw06882014001_04101_00002_nrcblong_cal.fits",
+  "file_bytes": 117576000,
+  "file_sha256": "d7156e9ea2bf37f81a4ea33722a16ec394c522e1d7ec6a65f878e3ea7ba8513c",
+  "horizons_retrieved_utc": "2026-11-27T12:06:42+00:00",
+  "versions": {
+    "python": "3.13.5",
+    "astropy": "8.0.3",
+    "astroquery": "0.4.11",
+    "gwcs": "1.0.3"
+  },
+  "product": {
+    "detector": "NRCBLONG",
+    "filter": "F444W",
+    "science_shape": [
+      2048,
+      2048
+    ],
+    "science_measurements": {
+      "shape": [
+        2048,
+        2048
+      ],
+      "unit": "MJy/sr",
+      "finite_fraction": 0.9565088748931885,
+      "dq_present": true,
+      "dq_do_not_use_clear_fraction": 0.9565088748931885,
+      "valid_fraction": 0.9565088748931885,
+      "valid_median": 0.23828189074993134,
+      "valid_p99": 0.3691435754299164,
+      "center_sci": 0.22536133229732513,
+      "center_dq": 0
+    },
+    "wcs_frames": [
+      "detector",
+      "v2v3",
+      "v2v3vacorr",
+      "world"
+    ],
+    "wcs_corner_and_center_icrs_deg": [
+      [
+        44.434611293,
+        -22.18912884
+      ],
+      [
+        44.426324726,
+        -22.224636089
+      ],
+      [
+        44.388448778,
+        -22.216799689
+      ],
+      [
+        44.396264115,
+        -22.182088023
+      ],
+      [
+        44.411371245,
+        -22.203161344
+      ]
+    ],
+    "wcs_reference_pixel_sci_xy_zero_based": [
+      1023.5,
+      1023.5
+    ],
+    "wcs_reference_pixel_icrs_deg": [
+      44.4113712452804,
+      -22.20316134398959
+    ],
+    "reference_pixel_offset_from_ra_ref_arcsec": 0.010254490478032835,
+    "center_offset_from_ra_ref_arcsec": 0.010254490478032835,
+    "center_constellation_roman_1987": "Eridanus"
+  },
+  "time": {
+    "timesys": "UTC",
+    "mjd_avg_utc": 60931.73530850695,
+    "mjd_avg_to_tdb_mjd": 60931.736109230114,
+    "mjd_avg_to_tdb_isot": "2025-09-13T17:39:59.837",
+    "barycentric_tdb_mid_header_mjd": 60931.739479566044,
+    "barycentric_correction_seconds": 360.36822425667197
+  },
+  "jwst_geocentric_position": {
+    "horizons_target": "James Webb Space Telescope (spac",
+    "horizons_target_id": "-170",
+    "horizons_center": "Earth center (@399)",
+    "horizons_reference_frame": "ICRF, Earth-equator reference plane",
+    "horizons_correction": "geometric; no light-time or aberration correction",
+    "horizons_xyz_km": [
+      1149797.6405355076,
+      -424564.184676011,
+      112567.11472833644
+    ],
+    "fits_obsgeo_xyz_km": [
+      1149797.640492477,
+      -424564.18467869953,
+      112567.11470674105
+    ],
+    "component_delta_horizons_minus_fits_km": [
+      4.3030595406889915e-05,
+      2.688553649932146e-06,
+      2.159539144486189e-05
+    ],
+    "vector_delta_norm_km": 4.822054949351815e-05,
+    "note": "Within 1 km after converting local MJD-AVG UTC to TDB; barycentric TDB-MID is retained separately."
+  }
+}
+

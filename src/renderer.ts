@@ -26,8 +26,10 @@ function circle([x, y]: [number, number], radius: number, fill: string): string 
 }
 
 export type RenderMode = "large" | "compact";
+export type OrbitDiagramScene = Pick<Scene, "phases" | "pointing">;
+export type OrbitDiagramLabels = { title?: string; description?: string };
 
-export function renderOrbit(scene: Scene, mode: RenderMode = "large"): string {
+export function renderOrbit(scene: OrbitDiagramScene, mode: RenderMode = "large", labels: OrbitDiagramLabels = {}): string {
   const compact = mode === "compact";
   const novemberOffset = compact && scene.phases.earth >= 45 && scene.phases.earth <= 135 ? 56 : 0;
   const diagramCenterY = 340 + novemberOffset;
@@ -65,7 +67,7 @@ export function renderOrbit(scene: Scene, mode: RenderMode = "large"): string {
     { anchor: moon, name: "Moon", color: "#bdcad1", candidates: [[10, -10], [10, 22], [-48, -10], [-48, 22], [0, -28]] },
     { anchor: localCenter, name: "L2", color: "#ffad77", candidates: [[16, -22], [16, 34], [-48, -22], [-48, 34], [0, -42]] },
     { anchor: webb, name: "Webb", color: compact ? "#ff8738" : "#ffad77", candidates: compact && webb[0] > 790
-      ? [[-105, -28], [-105, 38], [-72, -50], [-72, 55], [-125, 5]]
+      ? [[-220, -50], [-220, 75], [-190, -85], [-250, 5], [-180, 100]]
       : [[16, 38], [16, -24], [-82, 38], [-82, -24], [0, 50]] },
   ];
   const placed: { x: number; y: number; width: number }[] = [];
@@ -108,8 +110,8 @@ export function renderOrbit(scene: Scene, mode: RenderMode = "large"): string {
   const lineWidth = compact ? 4.2 : 2.5;
   const labelSize = compact ? 36 : 12;
   return `<svg class="orbit-svg ${compact ? "compact" : "large"}" viewBox="0 0 1040 600" role="img" aria-labelledby="orbit-title orbit-desc" xmlns="http://www.w3.org/2000/svg">
-    <title id="orbit-title">Synthetic Webb orbital scene</title>
-    <desc id="orbit-desc">A horizontal, side-view diagram of Earth's annual ellipse around the centered Sun, with visible schematic ellipses for the Moon around Earth and Webb around L2. The purple marker shows Webb's pointing direction.</desc>
+    <title id="orbit-title">${labels.title ?? "Synthetic Webb orbital scene"}</title>
+    <desc id="orbit-desc">${labels.description ?? "A horizontal, side-view diagram of Earth's annual ellipse around the centered Sun, with visible schematic ellipses for the Moon around Earth and Webb around L2. The purple marker shows Webb's pointing direction."}</desc>
     <defs><radialGradient id="space"><stop stop-color="${compact ? "#252b3d" : "#111622"}"/><stop offset="1" stop-color="#090b10"/></radialGradient></defs>
     <rect width="1040" height="600" fill="url(#space)"/>
     <text x="520" y="58" text-anchor="middle" fill="#ececf2" font-size="${compact ? 38 : 20}" font-weight="${compact ? 700 : 500}" font-family="DM Sans,Arial,sans-serif">Location of the Webb Telescope</text>

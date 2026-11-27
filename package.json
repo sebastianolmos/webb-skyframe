@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "tsc --noEmit && vite build",
-    "render:sky-fixtures": "node scripts/render-sky-fixtures.cjs"
+    "render:sky-fixtures": "node scripts/render-sky-fixtures.cjs",
+    "render:real-card": "node scripts/render-real-card.cjs"
   },
   "devDependencies": {
     "typescript": "^5.9.0",

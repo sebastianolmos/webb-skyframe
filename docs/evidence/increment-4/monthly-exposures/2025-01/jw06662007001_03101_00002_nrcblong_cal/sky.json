@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "resolved-sky-1",
+  "scene": {
+    "center": [
+      5.0729318505389855,
+      59.32766154651087
+    ],
+    "footprint": [
+      [
+        5.0691979630018835,
+        59.30204700679836
+      ],
+      [
+        5.023007988656955,
+        59.32968141720028
+      ],
+      [
+        5.076925994997843,
+        59.35280209567921
+      ],
+      [
+        5.122397129522485,
+        59.3259837520815
+      ]
+    ],
+    "figureEdges": [
+      [
+        [
+          28.5989,
+          63.6701
+        ],
+        [
+          21.454,
+          60.2353
+        ]
+      ],
+      [
+        [
+          21.454,
+          60.2353
+        ],
+        [
+          14.1772,
+          60.7167
+        ]
+      ],
+      [
+        [
+          14.1772,
+          60.7167
+        ],
+        [
+          10.1268,
+          56.5373
+        ]
+      ],
+      [
+        [
+          10.1268,
+          56.5373
+        ],
+        [
+          2.2945,
+          59.1498
+        ]
+      ]
+    ],
+    "figureStars": [
+      [
+        2.2945,
+        59.1498
+      ],
+      [
+        10.1268,
+        56.5373
+      ],
+      [
+        14.1772,
+        60.7167
+      ],
+      [
+        21.454,
+        60.2353
+      ],
+      [
+        28.5989,
+        63.6701
+      ]
+    ],
+    "overviewStars": [],
+    "detail": {
+      "center": [
+        4.143623697086229,
+        59.27496035728628
+      ],
+      "sizeDeg": [
+        5.0,
+        5.0
+      ],
+      "corners": [
+        [
+          8.695213314357103,
+          56.691954751817924
+        ],
+        [
+          359.59203407981533,
+          56.69195475181792
+        ],
+        [
+          358.8740800967194,
+          61.67372319564628
+        ],
+        [
+          9.413167297453064,
+          61.67372319564628
+        ]
+      ],
+      "stars": [],
+      "segments": [
+        [
+          [
+            10.1268,
+            56.5373
+          ],
+          [
+            2.2945,
+            59.1498
+          ]
+        ]
+      ]
+    }
+  },
+  "region": "Cassiopeia",
+  "abbreviation": "Cas",
+  "reference": [
+    5.072928776671745,
+    59.327658284114484
+  ],
+  "centerOffsetArcsec": 0.013030835426851555,
+  "catalog": {
+    "stars": {
+      "source": "HYG v4.1 (audited, not rendered in this card)",
+      "revision": "3bf37f4b2d5460e1278286320d1d62fab9b493c1",
+      "sha256": "2b4d54f0a83db866c6d2eda76cd78bbcc713cc14e1ce8812093fb3ee586df673",
+      "sourceEpoch": "J2000.0",
+      "frame": "ICRS",
+      "magnitude": "apparent visual",
+      "selected": 0,
+      "detailSelected": 0,
+      "displayPolicy": "constellation figure only; no contextual catalog stars",
+      "license": "CC BY-SA 4.0"
+    },
+    "figures": {
+      "source": "d3-celestial constellations.lines.json",
+      "revision": "7e720a3de062059d4c5400a379146a601d9010e0",
+      "sha256": "294f66bef5d5cf50b1e17f16d2efa1d97a15131612c68dd935adef6e7373e13c",
+      "sourceCoordinates": "RA degrees signed about zero; Dec degrees",
+      "selectedFeatures": [
+        "Cas"
+      ],
+      "detailFeatures": [
+        "Cas"
+      ],
+      "license": "BSD-3-Clause"
+    },
+    "constellationClassifier": {
+      "implementation": "astropy.coordinates.get_constellation",
+      "version": "8.0.3",
+      "reference": "Roman 1987 / Delporte B1875"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "result": "PASS",
+  "network": "disabled; render entry uses only JSON and PNG files from this bundle",
+  "node": "v26.13.1",
+  "renderer": "TypeScript 5.9.3",
+  "browser": "158.0.8127.88",
+  "productId": "jw06434461001_02201_00014_nrcb4_cal",
+  "mode": "double",
+  "svg": {
+    "bytes": 811512,
+    "sha256": "6510ca26b707a0058acb52fe4e44357a83fbece3182c1b7cbb1d63815d23265f"
+  },
+  "png": {
+    "bytes": 352787,
+    "sha256": "a40b6ed6722ba4132c421f915e00fddfb80919851a4662ece5ccaa45db6db0ed"
+  },
+  "sourcePhoto": {
+    "bytes": 602649,
+    "sha256": "20dcc07d9eada87fd19f190fdec142a7059629a3d1ce7293b4f3ce23b67cd57d"
+  },
+  "bundleMemberDigests": {
+    "photo-1024.png": {
+      "bytes": 602649,
+      "sha256": "20dcc07d9eada87fd19f190fdec142a7059629a3d1ce7293b4f3ce23b67cd57d"
+    },
+    "sky.json": {
+      "bytes": 3079,
+      "sha256": "8321939e6c2a139e5ace2e693c8a718d1b2b8a4131571858464d48eda1c9aa37"
+    },
+    "orbit.json": {
+      "bytes": 19543,
+      "sha256": "d7d58588016425d654e32a69a67d5fd097864d902fce8fedbe69cf4d43ee9a73"
+    },
+    "horizons-inputs.json": {
+      "bytes": 32331,
+      "sha256": "63db9faab43b2820a540652566af5c21c48b16f484e7d7cd93da2de53b298acd"
+    },
+    "licenses/HYG-Database-LICENSE": {
+      "bytes": 422,
+      "sha256": "f404190403d31e0ce7223f4cb7af954485ad88077358330754dc5c892a856627"
+    },
+    "licenses/d3-celestial-LICENSE": {
+      "bytes": 1480,
+      "sha256": "a8c79239001ad4bea243d1796b85084e1fc39309c5c5a663930a1b46320254c6"
+    },
+    "licenses/HYG-Database-README.md": {
+      "bytes": 3930,
+      "sha256": "19d40e234334c781e07d15c8673f930597875aca914db5b5783abb738a1085b7"
+    },
+    "licenses/d3-celestial-data-README.md": {
+      "bytes": 7563,
+      "sha256": "f222a083836789455ed88726efb88ad80fa6a5a50538dd59d4600f2240e5a387"
+    }
+  }
+}

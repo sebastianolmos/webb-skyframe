@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "resolved-sky-1",
+  "scene": {
+    "center": [
+      180.536462514573,
+      -65.07978927843465
+    ],
+    "footprint": [
+      [
+        180.50651475677702,
+        -65.07927427561658
+      ],
+      [
+        180.53764840379066,
+        -65.06705469079827
+      ],
+      [
+        180.56624911610243,
+        -65.08036026038701
+      ],
+      [
+        180.53539122080787,
+        -65.09234607860895
+      ]
+    ],
+    "figureEdges": [
+      [
+        [
+          176.4017,
+          -66.7288
+        ],
+        [
+          184.3928,
+          -67.9607
+        ]
+      ],
+      [
+        [
+          184.3928,
+          -67.9607
+        ],
+        [
+          189.2959,
+          -69.1356
+        ]
+      ],
+      [
+        [
+          189.2959,
+          -69.1356
+        ],
+        [
+          191.57,
+          -68.1081
+        ]
+      ],
+      [
+        [
+          191.57,
+          -68.1081
+        ],
+        [
+          195.5678,
+          -71.5489
+        ]
+      ],
+      [
+        [
+          195.5678,
+          -71.5489
+        ],
+        [
+          188.1167,
+          -72.133
+        ]
+      ],
+      [
+        [
+          188.1167,
+          -72.133
+        ],
+        [
+          189.2959,
+          -69.1356
+        ]
+      ]
+    ],
+    "figureStars": [
+      [
+        176.4017,
+        -66.7288
+      ],
+      [
+        184.3928,
+        -67.9607
+      ],
+      [
+        188.1167,
+        -72.133
+      ],
+      [
+        189.2959,
+        -69.1356
+      ],
+      [
+        191.57,
+        -68.1081
+      ],
+      [
+        195.5678,
+        -71.5489
+      ]
+    ],
+    "overviewStars": [],
+    "detail": {
+      "center": [
+        179.2169121728665,
+        -65.64166273509566
+      ],
+      "sizeDeg": [
+        5.0,
+        5.0
+      ],
+      "corners": [
+        [
+          185.8990998678635,
+          -68.00637865802057
+        ],
+        [
+          172.5347244778695,
+          -68.00637865802057
+        ],
+        [
+          173.70216910489907,
+          -63.03438140822093
+        ],
+        [
+          184.7316552408339,
+          -63.03438140822093
+        ]
+      ],
+      "stars": [],
+      "segments": [
+        [
+          [
+            176.4017,
+            -66.7288
+          ],
+          [
+            184.3928,
+            -67.9607
+          ]
+        ]
+      ]
+    }
+  },
+  "region": "Musca",
+  "abbreviation": "Mus",
+  "reference": [
+    180.5364626849599,
+    -65.07978933109595
+  ],
+  "centerOffsetArcsec": 0.00032053180532903836,
+  "catalog": {
+    "stars": {
+      "source": "HYG v4.1 (audited, not rendered in this card)",
+      "revision": "3bf37f4b2d5460e1278286320d1d62fab9b493c1",
+      "sha256": "2b4d54f0a83db866c6d2eda76cd78bbcc713cc14e1ce8812093fb3ee586df673",
+      "sourceEpoch": "J2000.0",
+      "frame": "ICRS",
+      "magnitude": "apparent visual",
+      "selected": 0,
+      "detailSelected": 0,
+      "displayPolicy": "constellation figure only; no contextual catalog stars",
+      "license": "CC BY-SA 4.0"
+    },
+    "figures": {
+      "source": "d3-celestial constellations.lines.json",
+      "revision": "7e720a3de062059d4c5400a379146a601d9010e0",
+      "sha256": "294f66bef5d5cf50b1e17f16d2efa1d97a15131612c68dd935adef6e7373e13c",
+      "sourceCoordinates": "RA degrees signed about zero; Dec degrees",
+      "selectedFeatures": [
+        "Mus"
+      ],
+      "detailFeatures": [
+        "Mus"
+      ],
+      "license": "BSD-3-Clause"
+    },
+    "constellationClassifier": {
+      "implementation": "astropy.coordinates.get_constellation",
+      "version": "8.0.3",
+      "reference": "Roman 1987 / Delporte B1875"
+    }
+  }
+}

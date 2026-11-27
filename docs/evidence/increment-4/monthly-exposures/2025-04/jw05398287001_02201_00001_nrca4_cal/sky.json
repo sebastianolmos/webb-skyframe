@@ -1,0 +1,158 @@
+{
+  "schemaVersion": "resolved-sky-1",
+  "scene": {
+    "center": [
+      150.0413943483665,
+      2.6908033404173692
+    ],
+    "footprint": [
+      [
+        150.03061787759654,
+        2.6845630040855757
+      ],
+      [
+        150.03514561959264,
+        2.701640440207773
+      ],
+      [
+        150.0522043329771,
+        2.696967675443044
+      ],
+      [
+        150.04763444118876,
+        2.680098496660732
+      ]
+    ],
+    "figureEdges": [
+      [
+        [
+          151.9845,
+          -0.3716
+        ],
+        [
+          148.1268,
+          -8.105
+        ]
+      ],
+      [
+        [
+          148.1268,
+          -8.105
+        ],
+        [
+          157.3696,
+          -2.7391
+        ]
+      ],
+      [
+        [
+          157.3696,
+          -2.7391
+        ],
+        [
+          157.5728,
+          -0.637
+        ]
+      ]
+    ],
+    "figureStars": [
+      [
+        148.1268,
+        -8.105
+      ],
+      [
+        151.9845,
+        -0.3716
+      ],
+      [
+        157.3696,
+        -2.7391
+      ],
+      [
+        157.5728,
+        -0.637
+      ]
+    ],
+    "overviewStars": [],
+    "detail": {
+      "center": [
+        150.68963218402976,
+        1.6701721567457648
+      ],
+      "sizeDeg": [
+        5.0,
+        5.0
+      ],
+      "corners": [
+        [
+          153.18751739933367,
+          -0.8290394765727312
+        ],
+        [
+          148.19174696872585,
+          -0.8290394765727312
+        ],
+        [
+          148.18538695677267,
+          4.166203617781998
+        ],
+        [
+          153.19387741128685,
+          4.166203617781999
+        ]
+      ],
+      "stars": [],
+      "segments": [
+        [
+          [
+            151.9845,
+            -0.3716
+          ],
+          [
+            148.1268,
+            -8.105
+          ]
+        ]
+      ]
+    }
+  },
+  "region": "Sextans",
+  "abbreviation": "Sex",
+  "reference": [
+    150.04143701799245,
+    2.6908165384677663
+  ],
+  "centerOffsetArcsec": 0.16062911116361328,
+  "catalog": {
+    "stars": {
+      "source": "HYG v4.1 (audited, not rendered in this card)",
+      "revision": "3bf37f4b2d5460e1278286320d1d62fab9b493c1",
+      "sha256": "2b4d54f0a83db866c6d2eda76cd78bbcc713cc14e1ce8812093fb3ee586df673",
+      "sourceEpoch": "J2000.0",
+      "frame": "ICRS",
+      "magnitude": "apparent visual",
+      "selected": 0,
+      "detailSelected": 0,
+      "displayPolicy": "constellation figure only; no contextual catalog stars",
+      "license": "CC BY-SA 4.0"
+    },
+    "figures": {
+      "source": "d3-celestial constellations.lines.json",
+      "revision": "7e720a3de062059d4c5400a379146a601d9010e0",
+      "sha256": "294f66bef5d5cf50b1e17f16d2efa1d97a15131612c68dd935adef6e7373e13c",
+      "sourceCoordinates": "RA degrees signed about zero; Dec degrees",
+      "selectedFeatures": [
+        "Sex"
+      ],
+      "detailFeatures": [
+        "Sex"
+      ],
+      "license": "BSD-3-Clause"
+    },
+    "constellationClassifier": {
+      "implementation": "astropy.coordinates.get_constellation",
+      "version": "8.0.3",
+      "reference": "Roman 1987 / Delporte B1875"
+    }
+  }
+}

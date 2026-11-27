@@ -1,0 +1,7 @@
+# Versions exercised against jw09438007001_03103_00002_nrca3_cal.fits.
+astropy==8.0.3
+astroquery==0.4.11
+asdf-astropy==0.11.0
+asdf-wcs-schemas==0.5.0
+gwcs==1.0.3
+Pillow==13.0.0

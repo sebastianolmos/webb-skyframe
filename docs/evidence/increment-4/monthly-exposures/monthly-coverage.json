@@ -1,0 +1,1261 @@
+{
+  "schemaVersion": "increment-4-monthly-acceptance-2",
+  "runUtc": "2026-11-27T12:35:39+00:00",
+  "selection": {
+    "archive": "MAST public JWST collection",
+    "criteria": [
+      "science image",
+      "public",
+      "NIRCam",
+      "product filename ends with _cal.fits"
+    ],
+    "visualFilterVersion": "visual-filter-1",
+    "visualRule": "brightness <= 45 OR (brightness < 90 AND totalJump <= 0.10)",
+    "technicalChecks": [
+      "original leer_exposicion method succeeds",
+      "increment-4 scene has evaluable ASDF/GWCS and spacecraft ephemeris"
+    ],
+    "maxFitsBytes": null,
+    "detectorPreference": null,
+    "filterPreference": null,
+    "months": [
+      "2025-01",
+      "2025-04",
+      "2025-05"
+    ]
+  },
+  "reference": {
+    "product": "jw09438007001_03103_00002_nrca3_cal.fits",
+    "month": "2025-09",
+    "sha256": "27700abb0042666e63de525e1f995334aa9dc793125721dd255b01f532703c14"
+  },
+  "tools": {
+    "python": "3.13.5",
+    "astroquery": "0.4.11",
+    "astropy": "8.0.3",
+    "mastTimeoutSeconds": 90
+  },
+  "exposures": [
+    {
+      "month": "2025-01",
+      "mastObservationId": null,
+      "mastDataUri": "mast:JWST/product/jw06662007001_03101_00002_nrcblong_cal.fits",
+      "mastTarget": "IC 10 X-1",
+      "fits": {
+        "name": "jw06662007001_03101_00002_nrcblong_cal.fits",
+        "bytes": 117576000,
+        "mastListedBytes": null,
+        "mastSizeDeltaBytes": null,
+        "sha256": "b3f869c6f75926798987f1f19729e3d112b3e53e49ed1488663e468e53096d10",
+        "ignoredLocalPath": "downloads\\increment-4\\2025-01\\jw06662007001_03101_00002_nrcblong_cal.fits"
+      },
+      "bundle": "docs/evidence/increment-4/monthly-exposures/2025-01/jw06662007001_03101_00002_nrcblong_cal",
+      "product": {
+        "id": "jw06662007001_03101_00002_nrcblong_cal",
+        "uri": "mast:JWST/product/jw06662007001_03101_00002_nrcblong_cal.fits",
+        "file": "jw06662007001_03101_00002_nrcblong_cal.fits",
+        "program": "06662",
+        "mission": "JWST",
+        "instrument": "NIRCAM",
+        "target": "IC 10 X-1",
+        "detector": "NRCBLONG",
+        "filter": "F277W",
+        "pupil": "CLEAR"
+      },
+      "metrics": {
+        "validFraction": 0.9796,
+        "rowVariation": 0.6393,
+        "columnVariation": 0.2121,
+        "rowJump": 0.0645,
+        "columnJump": 0.0528,
+        "totalJump": 0.1173,
+        "brightness": 12.0,
+        "stripesWarning": false,
+        "accepted": true,
+        "eligibilityApplied": true,
+        "metricsVersion": "visual-metrics-1",
+        "filterVersion": "visual-filter-1",
+        "dqPresent": true
+      },
+      "originalSampler": {
+        "archivo": "jw06662007001_03101_00002_nrcblong_cal.fits",
+        "uri_mast": "mast:JWST/product/jw06662007001_03101_00002_nrcblong_cal.fits",
+        "telescopio": "JWST",
+        "instrumento": "NIRCAM",
+        "detector": "NRCBLONG",
+        "filtro": "F277W",
+        "pupila": "CLEAR",
+        "objetivo_catalogado": "IC 10 X-1",
+        "programa": "06662",
+        "exposicion_inicio_utc": "2025-01-30T06:47:13.786",
+        "exposicion_fin_utc": "2025-01-30T06:49:44.101",
+        "instante_medio_usado_utc": "2025-01-30T06:48:28.943",
+        "posicion_webb": {
+          "xyz_baricentrico_km_del_fits": [
+            -96431019.54396805,
+            103950163.41597688,
+            44890214.626449205
+          ],
+          "marco_de_efemerides_del_fits": "EME2000",
+          "epoca_de_efemerides_mjd_del_fits": 60705.283668327545,
+          "tipo_de_efemerides_del_fits": "Definitive",
+          "xyz_desde_centro_tierra_km_aprox": [
+            -318166.2942239493,
+            1495780.721389547,
+            448195.5574139729
+          ],
+          "distancia_al_centro_tierra_km_aprox": 1593571
+        },
+        "apuntado_punto_de_referencia": {
+          "ascension_recta_grados": 5.072928776671745,
+          "declinacion_grados": 59.327658284114484,
+          "coordenadas_legibles": "00h20m17.5s +59d19m39.6s",
+          "constelacion": "Cassiopeia"
+        },
+        "metricas_visuales": {
+          "fraccion_pixeles_validos": 0.9796,
+          "variacion_entre_filas": 0.6393,
+          "variacion_entre_columnas": 0.2121,
+          "salto_entre_filas_vecinas": 0.0645,
+          "salto_entre_columnas_vecinas": 0.0528,
+          "brillo_mediano_fondo_png": 12.0,
+          "salto_total": 0.1173,
+          "revisar_por_franjas": false
+        }
+      },
+      "wcsReferencePixelOffsetArcsec": 0.013030835426851555,
+      "visualDecision": {
+        "filterVersion": "visual-filter-1",
+        "accepted": true
+      },
+      "webbPositionDeltaKm": 5.2949433796571734e-05,
+      "utcMjdAvgToTdb": "2025-01-30T06:49:38.128",
+      "horizons": {
+        "epochJdTdb": 2460705.784469077,
+        "source": "JPL Horizons API via Astroquery",
+        "frame": "heliocentric-ecliptic-J2000",
+        "unit": "km",
+        "l2Method": "radial-1,500,000-km-from-Sun estimate",
+        "localMagnification": 20.0,
+        "sceneKey": "orbit.json#scene"
+      },
+      "render": {
+        "result": "PASS",
+        "network": "disabled; render entry uses only JSON and PNG files from this bundle",
+        "node": "v26.13.1",
+        "renderer": "TypeScript 5.9.3",
+        "browser": "158.0.8127.88",
+        "productId": "jw06662007001_03101_00002_nrcblong_cal",
+        "mode": "double",
+        "svg": {
+          "bytes": 979044,
+          "sha256": "e671293238d242a94e040b1ac26e6e58929d9b87ac667066fc952e826077ff90"
+        },
+        "png": {
+          "bytes": 431842,
+          "sha256": "4b687430e8b32646e3a9920f89e13d42ffd4eb81b6527316c11f39208e9c6ae2"
+        },
+        "sourcePhoto": {
+          "bytes": 728568,
+          "sha256": "3136cb99919e8f76faba7b96ce4fa23c6a14d75b0c75b0f43fc9dd87a3f582d9"
+        },
+        "bundleMemberDigests": {
+          "photo-1024.png": {
+            "bytes": 728568,
+            "sha256": "3136cb99919e8f76faba7b96ce4fa23c6a14d75b0c75b0f43fc9dd87a3f582d9"
+          },
+          "sky.json": {
+            "bytes": 3436,
+            "sha256": "e96e792a613152cf8e4040aa808344e3abd7daa33693c40c0e9dc0df4b0d2ddb"
+          },
+          "orbit.json": {
+            "bytes": 19432,
+            "sha256": "92da9fb4ad076ff8eafdf40fb01c38e0e7d0c5c929e1e1a9cb72c456a21b6962"
+          },
+          "horizons-inputs.json": {
+            "bytes": 32365,
+            "sha256": "e380f163251e30d9b9de684cb8f23a3c8685d9d60e704b52186057fcf7374e16"
+          },
+          "licenses/HYG-Database-LICENSE": {
+            "bytes": 422,
+            "sha256": "f404190403d31e0ce7223f4cb7af954485ad88077358330754dc5c892a856627"
+          },
+          "licenses/d3-celestial-LICENSE": {
+            "bytes": 1480,
+            "sha256": "a8c79239001ad4bea243d1796b85084e1fc39309c5c5a663930a1b46320254c6"
+          },
+          "licenses/HYG-Database-README.md": {
+            "bytes": 3930,
+            "sha256": "19d40e234334c781e07d15c8673f930597875aca914db5b5783abb738a1085b7"
+          },
+          "licenses/d3-celestial-data-README.md": {
+            "bytes": 7563,
+            "sha256": "f222a083836789455ed88726efb88ad80fa6a5a50538dd59d4600f2240e5a387"
+          }
+        }
+      },
+      "reproducibility": {
+        "bundleMemberDigestsStable": true,
+        "memberCount": 9,
+        "svgSha256": "e671293238d242a94e040b1ac26e6e58929d9b87ac667066fc952e826077ff90",
+        "pngSha256": "4b687430e8b32646e3a9920f89e13d42ffd4eb81b6527316c11f39208e9c6ae2",
+        "network": "disabled for both rebuilds and renders",
+        "updatedFromPriorBundleVersion": true
+      }
+    },
+    {
+      "month": "2025-04",
+      "mastObservationId": null,
+      "mastDataUri": "mast:JWST/product/jw05398287001_02201_00001_nrca4_cal.fits",
+      "mastTarget": "UNKNOWN",
+      "fits": {
+        "name": "jw05398287001_02201_00001_nrca4_cal.fits",
+        "bytes": 117576000,
+        "mastListedBytes": null,
+        "mastSizeDeltaBytes": null,
+        "sha256": "b9a95194502b340c27a1827426c9a40f675f6b955a765de5baa0ae496d8613ce",
+        "ignoredLocalPath": "downloads\\increment-4\\2025-04\\jw05398287001_02201_00001_nrca4_cal.fits"
+      },
+      "bundle": "docs/evidence/increment-4/monthly-exposures/2025-04/jw05398287001_02201_00001_nrca4_cal",
+      "product": {
+        "id": "jw05398287001_02201_00001_nrca4_cal",
+        "uri": "mast:JWST/product/jw05398287001_02201_00001_nrca4_cal.fits",
+        "file": "jw05398287001_02201_00001_nrca4_cal.fits",
+        "program": "05398",
+        "mission": "JWST",
+        "instrument": "NIRCAM",
+        "target": "UNKNOWN",
+        "detector": "NRCA4",
+        "filter": "F200W",
+        "pupil": "CLEAR"
+      },
+      "metrics": {
+        "validFraction": 0.9836,
+        "rowVariation": 0.2223,
+        "columnVariation": 0.1953,
+        "rowJump": 0.0597,
+        "columnJump": 0.0607,
+        "totalJump": 0.1204,
+        "brightness": 28.0,
+        "stripesWarning": false,
+        "accepted": true,
+        "eligibilityApplied": true,
+        "metricsVersion": "visual-metrics-1",
+        "filterVersion": "visual-filter-1",
+        "dqPresent": true
+      },
+      "originalSampler": {
+        "archivo": "jw05398287001_02201_00001_nrca4_cal.fits",
+        "uri_mast": "mast:JWST/product/jw05398287001_02201_00001_nrca4_cal.fits",
+        "telescopio": "JWST",
+        "instrumento": "NIRCAM",
+        "detector": "NRCA4",
+        "filtro": "F200W",
+        "pupila": "CLEAR",
+        "objetivo_catalogado": null,
+        "programa": "05398",
+        "exposicion_inicio_utc": "2025-04-19T23:29:41.729",
+        "exposicion_fin_utc": "2025-04-19T23:52:36.036",
+        "instante_medio_usado_utc": "2025-04-19T23:41:08.883",
+        "posicion_webb": {
+          "xyz_baricentrico_km_del_fits": [
+            -131878463.03264481,
+            -70466471.77911797,
+            -30394462.308072068
+          ],
+          "marco_de_efemerides_del_fits": "EME2000",
+          "epoca_de_efemerides_mjd_del_fits": 60784.98690836227,
+          "tipo_de_efemerides_del_fits": "Definitive",
+          "xyz_desde_centro_tierra_km_aprox": [
+            -737571.3785565197,
+            -1202812.1227589548,
+            -398140.50880425796
+          ],
+          "distancia_al_centro_tierra_km_aprox": 1466044
+        },
+        "apuntado_punto_de_referencia": {
+          "ascension_recta_grados": 150.04143701799245,
+          "declinacion_grados": 2.6908165384677663,
+          "coordenadas_legibles": "10h00m09.9s +02d41m26.9s",
+          "constelacion": "Sextans"
+        },
+        "metricas_visuales": {
+          "fraccion_pixeles_validos": 0.9836,
+          "variacion_entre_filas": 0.2223,
+          "variacion_entre_columnas": 0.1953,
+          "salto_entre_filas_vecinas": 0.0597,
+          "salto_entre_columnas_vecinas": 0.0607,
+          "brillo_mediano_fondo_png": 28.0,
+          "salto_total": 0.1204,
+          "revisar_por_franjas": false
+        }
+      },
+      "wcsReferencePixelOffsetArcsec": 0.16062911116361328,
+      "visualDecision": {
+        "filterVersion": "visual-filter-1",
+        "accepted": true
+      },
+      "webbPositionDeltaKm": 3.475184473589357e-05,
+      "utcMjdAvgToTdb": "2025-04-19T23:42:18.068",
+      "horizons": {
+        "epochJdTdb": 2460785.4877091213,
+        "source": "JPL Horizons API via Astroquery",
+        "frame": "heliocentric-ecliptic-J2000",
+        "unit": "km",
+        "l2Method": "radial-1,500,000-km-from-Sun estimate",
+        "localMagnification": 20.0,
+        "sceneKey": "orbit.json#scene"
+      },
+      "render": {
+        "result": "PASS",
+        "network": "disabled; render entry uses only JSON and PNG files from this bundle",
+        "node": "v26.13.1",
+        "renderer": "TypeScript 5.9.3",
+        "browser": "158.0.8127.88",
+        "productId": "jw05398287001_02201_00001_nrca4_cal",
+        "mode": "double",
+        "svg": {
+          "bytes": 804832,
+          "sha256": "f23096304a2d5868022591b28c8d2dc55d0300e8c6312e1489640594d6439ecc"
+        },
+        "png": {
+          "bytes": 349543,
+          "sha256": "0c59a99157df475fc2d4a02b0b83b5107297dd21e2b8475c7ec704c6de6042ce"
+        },
+        "sourcePhoto": {
+          "bytes": 597868,
+          "sha256": "f08cb4c7f8520fd00995683a4a5405a5eba7f0309a608509147107a0d533366e"
+        },
+        "bundleMemberDigests": {
+          "photo-1024.png": {
+            "bytes": 597868,
+            "sha256": "f08cb4c7f8520fd00995683a4a5405a5eba7f0309a608509147107a0d533366e"
+          },
+          "sky.json": {
+            "bytes": 3261,
+            "sha256": "1b8a33d9d238ea583c23a5b33728526ff9c94bca0a85cfa5935327be045d3a75"
+          },
+          "orbit.json": {
+            "bytes": 19554,
+            "sha256": "d2e3d92109d1541f47484ae9ed00de659ba4dce99cde893ccc7e74a772c7e9bc"
+          },
+          "horizons-inputs.json": {
+            "bytes": 32425,
+            "sha256": "f4ba73ed85e4817920096fa88dae3fe58e25ce647d8b1e494d3e708425026882"
+          },
+          "licenses/HYG-Database-LICENSE": {
+            "bytes": 422,
+            "sha256": "f404190403d31e0ce7223f4cb7af954485ad88077358330754dc5c892a856627"
+          },
+          "licenses/d3-celestial-LICENSE": {
+            "bytes": 1480,
+            "sha256": "a8c79239001ad4bea243d1796b85084e1fc39309c5c5a663930a1b46320254c6"
+          },
+          "licenses/HYG-Database-README.md": {
+            "bytes": 3930,
+            "sha256": "19d40e234334c781e07d15c8673f930597875aca914db5b5783abb738a1085b7"
+          },
+          "licenses/d3-celestial-data-README.md": {
+            "bytes": 7563,
+            "sha256": "f222a083836789455ed88726efb88ad80fa6a5a50538dd59d4600f2240e5a387"
+          }
+        }
+      },
+      "reproducibility": {
+        "bundleMemberDigestsStable": true,
+        "memberCount": 9,
+        "svgSha256": "f23096304a2d5868022591b28c8d2dc55d0300e8c6312e1489640594d6439ecc",
+        "pngSha256": "0c59a99157df475fc2d4a02b0b83b5107297dd21e2b8475c7ec704c6de6042ce",
+        "network": "disabled for both rebuilds and renders",
+        "updatedFromPriorBundleVersion": true
+      }
+    },
+    {
+      "month": "2025-05",
+      "mastObservationId": null,
+      "mastDataUri": "mast:JWST/product/jw06151001001_03109_00001_nrca3_cal.fits",
+      "mastTarget": "w51A",
+      "fits": {
+        "name": "jw06151001001_03109_00001_nrca3_cal.fits",
+        "bytes": 117576000,
+        "mastListedBytes": null,
+        "mastSizeDeltaBytes": null,
+        "sha256": "a12850781a036e9559ffa43d6f72e587f5d22ee1d6b08074b60a0f7c55f7ba46",
+        "ignoredLocalPath": "downloads\\increment-4\\2025-05\\jw06151001001_03109_00001_nrca3_cal.fits"
+      },
+      "bundle": "docs/evidence/increment-4/monthly-exposures/2025-05/jw06151001001_03109_00001_nrca3_cal",
+      "product": {
+        "id": "jw06151001001_03109_00001_nrca3_cal",
+        "uri": "mast:JWST/product/jw06151001001_03109_00001_nrca3_cal.fits",
+        "file": "jw06151001001_03109_00001_nrca3_cal.fits",
+        "program": "06151",
+        "mission": "JWST",
+        "instrument": "NIRCAM",
+        "target": "w51A",
+        "detector": "NRCA3",
+        "filter": "F140M",
+        "pupil": "CLEAR"
+      },
+      "metrics": {
+        "validFraction": 0.9851,
+        "rowVariation": 0.1768,
+        "columnVariation": 0.2129,
+        "rowJump": 0.1039,
+        "columnJump": 0.0838,
+        "totalJump": 0.1877,
+        "brightness": 17.0,
+        "stripesWarning": false,
+        "accepted": true,
+        "eligibilityApplied": true,
+        "metricsVersion": "visual-metrics-1",
+        "filterVersion": "visual-filter-1",
+        "dqPresent": true
+      },
+      "originalSampler": {
+        "archivo": "jw06151001001_03109_00001_nrca3_cal.fits",
+        "uri_mast": "mast:JWST/product/jw06151001001_03109_00001_nrca3_cal.fits",
+        "telescopio": "JWST",
+        "instrumento": "NIRCAM",
+        "detector": "NRCA3",
+        "filtro": "F140M",
+        "pupila": "CLEAR",
+        "objetivo_catalogado": "w51A",
+        "programa": "06151",
+        "exposicion_inicio_utc": "2025-05-06T16:37:53.338",
+        "exposicion_fin_utc": "2025-05-06T16:41:49.547",
+        "instante_medio_usado_utc": "2025-05-06T16:39:51.442",
+        "posicion_webb": {
+          "xyz_baricentrico_km_del_fits": [
+            -105881513.99794473,
+            -101834932.9281982,
+            -44199275.588615246
+          ],
+          "marco_de_efemerides_del_fits": "EME2000",
+          "epoca_de_efemerides_mjd_del_fits": 60801.69434539931,
+          "tipo_de_efemerides_del_fits": "Definitive",
+          "xyz_desde_centro_tierra_km_aprox": [
+            -417227.0423204899,
+            -1402228.2291143537,
+            -690654.9571424499
+          ],
+          "distancia_al_centro_tierra_km_aprox": 1617815
+        },
+        "apuntado_punto_de_referencia": {
+          "ascension_recta_grados": 290.92820023587575,
+          "declinacion_grados": 14.523041801211665,
+          "coordenadas_legibles": "19h23m42.8s +14d31m23.0s",
+          "constelacion": "Aquila"
+        },
+        "metricas_visuales": {
+          "fraccion_pixeles_validos": 0.9851,
+          "variacion_entre_filas": 0.1768,
+          "variacion_entre_columnas": 0.2129,
+          "salto_entre_filas_vecinas": 0.1039,
+          "salto_entre_columnas_vecinas": 0.0838,
+          "brillo_mediano_fondo_png": 17.0,
+          "salto_total": 0.1877,
+          "revisar_por_franjas": false
+        }
+      },
+      "wcsReferencePixelOffsetArcsec": 0.001653810079272977,
+      "visualDecision": {
+        "filterVersion": "visual-filter-1",
+        "accepted": true
+      },
+      "webbPositionDeltaKm": 1.4676220272911911e-05,
+      "utcMjdAvgToTdb": "2025-05-06T16:41:00.628",
+      "horizons": {
+        "epochJdTdb": 2460802.195146156,
+        "source": "JPL Horizons API via Astroquery",
+        "frame": "heliocentric-ecliptic-J2000",
+        "unit": "km",
+        "l2Method": "radial-1,500,000-km-from-Sun estimate",
+        "localMagnification": 20.0,
+        "sceneKey": "orbit.json#scene"
+      },
+      "render": {
+        "result": "PASS",
+        "network": "disabled; render entry uses only JSON and PNG files from this bundle",
+        "node": "v26.13.1",
+        "renderer": "TypeScript 5.9.3",
+        "browser": "158.0.8127.88",
+        "productId": "jw06151001001_03109_00001_nrca3_cal",
+        "mode": "double",
+        "svg": {
+          "bytes": 756047,
+          "sha256": "efd7ef919aeb6d5221ca0e950ec7640799576345f32026135b78c71786dd984c"
+        },
+        "png": {
+          "bytes": 351608,
+          "sha256": "35e9fe0cf13e2b7a00f4fd3c3e655d89a334f53461a77424a9d7a7de902f6a29"
+        },
+        "sourcePhoto": {
+          "bytes": 558936,
+          "sha256": "f347721028bc19bcafd4edc2c4ef75655c860ef79ea952d895623f0bca7dc016"
+        },
+        "bundleMemberDigests": {
+          "photo-1024.png": {
+            "bytes": 558936,
+            "sha256": "f347721028bc19bcafd4edc2c4ef75655c860ef79ea952d895623f0bca7dc016"
+          },
+          "sky.json": {
+            "bytes": 4137,
+            "sha256": "b3f4cff51c0d423a077a31ca83e27dd551bec8969b435dab662bfa09b734f2d4"
+          },
+          "orbit.json": {
+            "bytes": 19580,
+            "sha256": "4a070a5312536b32b225f4f56c2035b5bb58d7a31236f32ee15d88a497ba1c0a"
+          },
+          "horizons-inputs.json": {
+            "bytes": 32354,
+            "sha256": "20a4004a3508ba9ff9c1a707fd80203c2e3ab7811303f9025bb1357ab6f5c604"
+          },
+          "licenses/HYG-Database-LICENSE": {
+            "bytes": 422,
+            "sha256": "f404190403d31e0ce7223f4cb7af954485ad88077358330754dc5c892a856627"
+          },
+          "licenses/d3-celestial-LICENSE": {
+            "bytes": 1480,
+            "sha256": "a8c79239001ad4bea243d1796b85084e1fc39309c5c5a663930a1b46320254c6"
+          },
+          "licenses/HYG-Database-README.md": {
+            "bytes": 3930,
+            "sha256": "19d40e234334c781e07d15c8673f930597875aca914db5b5783abb738a1085b7"
+          },
+          "licenses/d3-celestial-data-README.md": {
+            "bytes": 7563,
+            "sha256": "f222a083836789455ed88726efb88ad80fa6a5a50538dd59d4600f2240e5a387"
+          }
+        }
+      },
+      "reproducibility": {
+        "bundleMemberDigestsStable": true,
+        "memberCount": 9,
+        "svgSha256": "efd7ef919aeb6d5221ca0e950ec7640799576345f32026135b78c71786dd984c",
+        "pngSha256": "35e9fe0cf13e2b7a00f4fd3c3e655d89a334f53461a77424a9d7a7de902f6a29",
+        "network": "disabled for both rebuilds and renders",
+        "updatedFromPriorBundleVersion": true
+      }
+    },
+    {
+      "month": "2025-06",
+      "mastObservationId": "jw06434461001_02201_00014_nrcb4",
+      "mastDataUri": "mast:JWST/product/jw06434461001_02201_00014_nrcb4_cal.fits",
+      "mastTarget": "UNKNOWN",
+      "fits": {
+        "name": "jw06434461001_02201_00014_nrcb4_cal.fits",
+        "bytes": 117576000,
+        "mastListedBytes": 117576000,
+        "sha256": "b00a8b9dc39549b9b153ecf4ad01c6d3421d8644e98fdefde1950bc0dfbe4ef2",
+        "ignoredLocalPath": "downloads\\increment-4\\2025-06\\jw06434461001_02201_00014_nrcb4_cal.fits"
+      },
+      "bundle": "docs/evidence/increment-4/monthly-exposures/2025-06/jw06434461001_02201_00014_nrcb4_cal",
+      "product": {
+        "id": "jw06434461001_02201_00014_nrcb4_cal",
+        "uri": "mast:JWST/product/jw06434461001_02201_00014_nrcb4_cal.fits",
+        "file": "jw06434461001_02201_00014_nrcb4_cal.fits",
+        "program": "06434",
+        "mission": "JWST",
+        "instrument": "NIRCAM",
+        "target": "UNKNOWN",
+        "detector": "NRCB4",
+        "filter": "F200W",
+        "pupil": "CLEAR"
+      },
+      "metrics": {
+        "validFraction": 0.9766,
+        "rowVariation": 0.1097,
+        "columnVariation": 0.2033,
+        "rowJump": 0.078,
+        "columnJump": 0.0653,
+        "totalJump": 0.1433,
+        "brightness": 24.0,
+        "stripesWarning": false,
+        "accepted": true,
+        "eligibilityApplied": true,
+        "metricsVersion": "visual-metrics-1",
+        "filterVersion": "visual-filter-1",
+        "dqPresent": true
+      },
+      "originalSampler": {
+        "archivo": "jw06434461001_02201_00014_nrcb4_cal.fits",
+        "uri_mast": "mast:JWST/product/jw06434461001_02201_00014_nrcb4_cal.fits",
+        "telescopio": "JWST",
+        "instrumento": "NIRCAM",
+        "detector": "NRCB4",
+        "filtro": "F200W",
+        "pupila": "CLEAR",
+        "objetivo_catalogado": null,
+        "programa": "06434",
+        "exposicion_inicio_utc": "2025-06-19T18:14:51.313",
+        "exposicion_fin_utc": "2025-06-19T19:02:27.294",
+        "instante_medio_usado_utc": "2025-06-19T18:38:39.304",
+        "posicion_webb": {
+          "xyz_baricentrico_km_del_fits": [
+            -5050272.567417733,
+            -141567854.406786,
+            -61761655.22923061
+          ],
+          "marco_de_efemerides_del_fits": "EME2000",
+          "epoca_de_efemerides_mjd_del_fits": 60845.77684379051,
+          "tipo_de_efemerides_del_fits": "Definitive",
+          "xyz_desde_centro_tierra_km_aprox": [
+            -64474.124980751425,
+            -1410714.823273629,
+            -1031651.1272507459
+          ],
+          "distancia_al_centro_tierra_km_aprox": 1748879
+        },
+        "apuntado_punto_de_referencia": {
+          "ascension_recta_grados": 3.593611672883801,
+          "declinacion_grados": -30.462443224262156,
+          "coordenadas_legibles": "00h14m22.5s -30d27m44.8s",
+          "constelacion": "Sculptor"
+        },
+        "metricas_visuales": {
+          "fraccion_pixeles_validos": 0.9766,
+          "variacion_entre_filas": 0.1097,
+          "variacion_entre_columnas": 0.2033,
+          "salto_entre_filas_vecinas": 0.078,
+          "salto_entre_columnas_vecinas": 0.0653,
+          "brillo_mediano_fondo_png": 24.0,
+          "salto_total": 0.1433,
+          "revisar_por_franjas": false
+        }
+      },
+      "wcsReferencePixelOffsetArcsec": 0.06023386392235378,
+      "webbPositionDeltaKm": 2.152190765928006e-05,
+      "utcMjdAvgToTdb": "2025-06-19T18:39:48.488",
+      "horizons": {
+        "epochJdTdb": 2460846.277644536,
+        "source": "JPL Horizons API via Astroquery",
+        "frame": "heliocentric-ecliptic-J2000",
+        "unit": "km",
+        "l2Method": "radial-1,500,000-km-from-Sun estimate",
+        "localMagnification": 20.0,
+        "sceneKey": "orbit.json#scene"
+      },
+      "render": {
+        "result": "PASS",
+        "network": "disabled; render entry uses only JSON and PNG files from this bundle",
+        "node": "v26.13.1",
+        "renderer": "TypeScript 5.9.3",
+        "browser": "158.0.8127.88",
+        "productId": "jw06434461001_02201_00014_nrcb4_cal",
+        "mode": "double",
+        "svg": {
+          "bytes": 811512,
+          "sha256": "6510ca26b707a0058acb52fe4e44357a83fbece3182c1b7cbb1d63815d23265f"
+        },
+        "png": {
+          "bytes": 352787,
+          "sha256": "a40b6ed6722ba4132c421f915e00fddfb80919851a4662ece5ccaa45db6db0ed"
+        },
+        "sourcePhoto": {
+          "bytes": 602649,
+          "sha256": "20dcc07d9eada87fd19f190fdec142a7059629a3d1ce7293b4f3ce23b67cd57d"
+        },
+        "bundleMemberDigests": {
+          "photo-1024.png": {
+            "bytes": 602649,
+            "sha256": "20dcc07d9eada87fd19f190fdec142a7059629a3d1ce7293b4f3ce23b67cd57d"
+          },
+          "sky.json": {
+            "bytes": 3079,
+            "sha256": "8321939e6c2a139e5ace2e693c8a718d1b2b8a4131571858464d48eda1c9aa37"
+          },
+          "orbit.json": {
+            "bytes": 19543,
+            "sha256": "d7d58588016425d654e32a69a67d5fd097864d902fce8fedbe69cf4d43ee9a73"
+          },
+          "horizons-inputs.json": {
+            "bytes": 32331,
+            "sha256": "63db9faab43b2820a540652566af5c21c48b16f484e7d7cd93da2de53b298acd"
+          },
+          "licenses/HYG-Database-LICENSE": {
+            "bytes": 422,
+            "sha256": "f404190403d31e0ce7223f4cb7af954485ad88077358330754dc5c892a856627"
+          },
+          "licenses/d3-celestial-LICENSE": {
+            "bytes": 1480,
+            "sha256": "a8c79239001ad4bea243d1796b85084e1fc39309c5c5a663930a1b46320254c6"
+          },
+          "licenses/HYG-Database-README.md": {
+            "bytes": 3930,
+            "sha256": "19d40e234334c781e07d15c8673f930597875aca914db5b5783abb738a1085b7"
+          },
+          "licenses/d3-celestial-data-README.md": {
+            "bytes": 7563,
+            "sha256": "f222a083836789455ed88726efb88ad80fa6a5a50538dd59d4600f2240e5a387"
+          }
+        }
+      },
+      "reproducibility": {
+        "bundleMemberDigestsStable": true,
+        "memberCount": 9,
+        "svgSha256": "6510ca26b707a0058acb52fe4e44357a83fbece3182c1b7cbb1d63815d23265f",
+        "pngSha256": "a40b6ed6722ba4132c421f915e00fddfb80919851a4662ece5ccaa45db6db0ed",
+        "network": "disabled for both rebuilds and renders",
+        "updatedFromPriorBundleVersion": true
+      },
+      "commands": {
+        "build": "build-real-bundle.py",
+        "verification": "verify-real-fits.py",
+        "render": "render-real-card.cjs (network disabled)"
+      },
+      "buildSummary": ": \"mast:JWST/product/jw06434461001_02201_00014_nrcb4_cal.fits\",\n    \"file\": \"jw06434461001_02201_00014_nrcb4_cal.fits\",\n    \"program\": \"06434\",\n    \"mission\": \"JWST\",\n    \"instrument\": \"NIRCAM\",\n    \"target\": \"UNKNOWN\",\n    \"detector\": \"NRCB4\",\n    \"filter\": \"F200W\",\n    \"pupil\": \"CLEAR\"\n  },\n  \"image\": {\n    \"key\": \"photo-1024.png\",\n    \"format\": \"image/png\",\n    \"size\": [\n      1024,\n      1024\n    ],\n    \"sourceSize\": [\n      2048,\n      2048\n    ],\n    \"mapping\": \"full-frame-unflipped; Pillow LANCZOS resize\",\n    \"stretch\": \"p1-p99.7-asinh10-v1\"\n  },\n  \"metrics\": {\n    \"validFraction\": 0.9766,\n    \"rowVariation\": 0.1097,\n    \"columnVariation\": 0.2033,\n    \"rowJump\": 0.078,\n    \"columnJump\": 0.0653,\n    \"totalJump\": 0.1433,\n    \"brightness\": 24.0,\n    \"stripesWarning\": false,\n    \"accepted\": null,\n    \"eligibilityApplied\": false,\n    \"metricsVersion\": \"visual-metrics-1\",\n    \"dqPresent\": true\n  },\n  \"sky\": {\n    \"region\": \"Sculptor\",\n    \"overviewStars\": 0,\n    \"detailStars\": 0,\n    \"overviewSegments\": 3,\n    \"detailSegments\": 0\n  },\n  \"orbit\": {\n    \"epochJdTdb\": 2460846.277644536,\n    \"earthTrack\": 25,\n    \"moonTrack\": 13,\n    \"webbTrack\": 19\n  },\n  \"sourcePngMatched\": null\n}\n",
+      "visualDecision": {
+        "filterVersion": "visual-filter-1",
+        "accepted": true
+      }
+    },
+    {
+      "month": "2025-07",
+      "mastObservationId": null,
+      "mastDataUri": "mast:JWST/product/jw05552014001_05201_00002_nrca3_cal.fits",
+      "mastTarget": "unknown",
+      "fits": {
+        "name": "jw05552014001_05201_00002_nrca3_cal.fits",
+        "bytes": 117576000,
+        "mastListedBytes": null,
+        "mastSizeDeltaBytes": null,
+        "sha256": "20e347c31c608846b372ddb81f6d438653d2e161245c10398ad3b3cf2c7c7c52",
+        "ignoredLocalPath": "downloads\\increment-4\\2025-07\\jw05552014001_05201_00002_nrca3_cal.fits"
+      },
+      "bundle": "docs/evidence/increment-4/monthly-exposures/2025-07/jw05552014001_05201_00002_nrca3_cal",
+      "product": {
+        "id": "jw05552014001_05201_00002_nrca3_cal",
+        "uri": "mast:JWST/product/jw05552014001_05201_00002_nrca3_cal.fits",
+        "file": "jw05552014001_05201_00002_nrca3_cal.fits",
+        "program": "05552",
+        "mission": "JWST",
+        "instrument": "NIRCAM",
+        "target": "unknown",
+        "detector": "NRCA3",
+        "filter": "F187N",
+        "pupil": "CLEAR"
+      },
+      "metrics": {
+        "validFraction": 0.9851,
+        "rowVariation": 0.1509,
+        "columnVariation": 0.1313,
+        "rowJump": 0.1338,
+        "columnJump": 0.1041,
+        "totalJump": 0.2379,
+        "brightness": 40.0,
+        "stripesWarning": true,
+        "accepted": true,
+        "eligibilityApplied": true,
+        "metricsVersion": "visual-metrics-1",
+        "filterVersion": "visual-filter-1",
+        "dqPresent": true
+      },
+      "originalSampler": {
+        "archivo": "jw05552014001_05201_00002_nrca3_cal.fits",
+        "uri_mast": "mast:JWST/product/jw05552014001_05201_00002_nrca3_cal.fits",
+        "telescopio": "JWST",
+        "instrumento": "NIRCAM",
+        "detector": "NRCA3",
+        "filtro": "F187N",
+        "pupila": "CLEAR",
+        "objetivo_catalogado": "",
+        "programa": "05552",
+        "exposicion_inicio_utc": "2025-07-31T07:57:55.393",
+        "exposicion_fin_utc": "2025-07-31T08:07:13.705",
+        "instante_medio_usado_utc": "2025-07-31T08:02:34.549",
+        "posicion_webb": {
+          "xyz_baricentrico_km_del_fits": [
+            93189457.35474733,
+            -111905785.60164735,
+            -48667378.045780756
+          ],
+          "marco_de_efemerides_del_fits": "EME2000",
+          "epoca_de_efemerides_mjd_del_fits": 60887.335122094904,
+          "tipo_de_efemerides_del_fits": "Definitive",
+          "xyz_desde_centro_tierra_km_aprox": [
+            258878.91392070055,
+            -1413095.5842155665,
+            -795328.5668931827
+          ],
+          "distancia_al_centro_tierra_km_aprox": 1642073
+        },
+        "apuntado_punto_de_referencia": {
+          "ascension_recta_grados": 180.5364626849599,
+          "declinacion_grados": -65.07978933109595,
+          "coordenadas_legibles": "12h02m08.8s -65d04m47.2s",
+          "constelacion": "Musca"
+        },
+        "metricas_visuales": {
+          "fraccion_pixeles_validos": 0.9851,
+          "variacion_entre_filas": 0.1509,
+          "variacion_entre_columnas": 0.1313,
+          "salto_entre_filas_vecinas": 0.1338,
+          "salto_entre_columnas_vecinas": 0.1041,
+          "brillo_mediano_fondo_png": 40.0,
+          "salto_total": 0.2379,
+          "revisar_por_franjas": true
+        }
+      },
+      "wcsReferencePixelOffsetArcsec": 0.00032053180532903836,
+      "webbPositionDeltaKm": 5.7339643784695856e-05,
+      "utcMjdAvgToTdb": "2025-07-31T08:03:43.732",
+      "horizons": {
+        "epochJdTdb": 2460887.8359228275,
+        "source": "JPL Horizons API via Astroquery",
+        "frame": "heliocentric-ecliptic-J2000",
+        "unit": "km",
+        "l2Method": "radial-1,500,000-km-from-Sun estimate",
+        "localMagnification": 20.0,
+        "sceneKey": "orbit.json#scene"
+      },
+      "render": {
+        "result": "PASS",
+        "network": "disabled; render entry uses only JSON and PNG files from this bundle",
+        "node": "v26.13.1",
+        "renderer": "TypeScript 5.9.3",
+        "browser": "158.0.8127.88",
+        "productId": "jw05552014001_05201_00002_nrca3_cal",
+        "mode": "double",
+        "svg": {
+          "bytes": 939706,
+          "sha256": "5ca116d6a912d51db23fe78c3dfd925763f3d125bd0d4c9af25580f253f4cd69"
+        },
+        "png": {
+          "bytes": 394468,
+          "sha256": "84c030df04331859801391b3042305377517962e9b0ec36e3d22d9a5cde99fe1"
+        },
+        "sourcePhoto": {
+          "bytes": 698990,
+          "sha256": "99b23867a88f589979a7f408ebc9574ef3dafd910dce7c4b0e26cf426a971d79"
+        },
+        "bundleMemberDigests": {
+          "photo-1024.png": {
+            "bytes": 698990,
+            "sha256": "99b23867a88f589979a7f408ebc9574ef3dafd910dce7c4b0e26cf426a971d79"
+          },
+          "sky.json": {
+            "bytes": 3819,
+            "sha256": "e53323ca1cf2dd3b1a4ba5616795694cfa149fa717a4d650b2baedf96e0292df"
+          },
+          "orbit.json": {
+            "bytes": 19501,
+            "sha256": "b9bccc6eebf9506548c60b5f4a688038994f293e4fa974cfa53659e35133f275"
+          },
+          "horizons-inputs.json": {
+            "bytes": 32406,
+            "sha256": "3cf6e1f89b85ba658ce033710ad7afb9c17e7c50e2653c2d3405140fbd2c06b3"
+          },
+          "licenses/HYG-Database-LICENSE": {
+            "bytes": 422,
+            "sha256": "f404190403d31e0ce7223f4cb7af954485ad88077358330754dc5c892a856627"
+          },
+          "licenses/d3-celestial-LICENSE": {
+            "bytes": 1480,
+            "sha256": "a8c79239001ad4bea243d1796b85084e1fc39309c5c5a663930a1b46320254c6"
+          },
+          "licenses/HYG-Database-README.md": {
+            "bytes": 3930,
+            "sha256": "19d40e234334c781e07d15c8673f930597875aca914db5b5783abb738a1085b7"
+          },
+          "licenses/d3-celestial-data-README.md": {
+            "bytes": 7563,
+            "sha256": "f222a083836789455ed88726efb88ad80fa6a5a50538dd59d4600f2240e5a387"
+          }
+        }
+      },
+      "reproducibility": {
+        "bundleMemberDigestsStable": true,
+        "memberCount": 9,
+        "svgSha256": "5ca116d6a912d51db23fe78c3dfd925763f3d125bd0d4c9af25580f253f4cd69",
+        "pngSha256": "84c030df04331859801391b3042305377517962e9b0ec36e3d22d9a5cde99fe1",
+        "network": "disabled for both rebuilds and renders",
+        "updatedFromPriorBundleVersion": true
+      },
+      "visualDecision": {
+        "filterVersion": "visual-filter-1",
+        "accepted": true
+      }
+    },
+    {
+      "month": "2025-08",
+      "mastObservationId": "jw08527-o002_t001_nircam_clear-f200w",
+      "mastDataUri": "mast:JWST/product/jw08527002001_03101_00003_nrca1_cal.fits",
+      "mastTarget": "Maki-Repeated",
+      "fits": {
+        "name": "jw08527002001_03101_00003_nrca1_cal.fits",
+        "bytes": 117573120,
+        "mastListedBytes": 117573120,
+        "sha256": "cf58fc16619a12d0a8c2eeb4a9382c2fd7ba15913192801ce4d8ed216d14aeca",
+        "ignoredLocalPath": "downloads\\increment-4\\2025-08\\jw08527002001_03101_00003_nrca1_cal.fits"
+      },
+      "bundle": "docs/evidence/increment-4/monthly-exposures/2025-08/jw08527002001_03101_00003_nrca1_cal",
+      "product": {
+        "id": "jw08527002001_03101_00003_nrca1_cal",
+        "uri": "mast:JWST/product/jw08527002001_03101_00003_nrca1_cal.fits",
+        "file": "jw08527002001_03101_00003_nrca1_cal.fits",
+        "program": "08527",
+        "mission": "JWST",
+        "instrument": "NIRCAM",
+        "target": "Maki",
+        "detector": "NRCA1",
+        "filter": "F200W",
+        "pupil": "CLEAR"
+      },
+      "metrics": {
+        "validFraction": 0.9806,
+        "rowVariation": 0.2717,
+        "columnVariation": 0.0735,
+        "rowJump": 0.0688,
+        "columnJump": 0.0643,
+        "totalJump": 0.1331,
+        "brightness": 26.0,
+        "stripesWarning": false,
+        "accepted": true,
+        "eligibilityApplied": true,
+        "metricsVersion": "visual-metrics-1",
+        "filterVersion": "visual-filter-1",
+        "dqPresent": true
+      },
+      "originalSampler": {
+        "archivo": "jw08527002001_03101_00003_nrca1_cal.fits",
+        "uri_mast": "mast:JWST/product/jw08527002001_03101_00003_nrca1_cal.fits",
+        "telescopio": "JWST",
+        "instrumento": "NIRCAM",
+        "detector": "NRCA1",
+        "filtro": "F200W",
+        "pupila": "CLEAR",
+        "objetivo_catalogado": "Maki",
+        "programa": "08527",
+        "exposicion_inicio_utc": "2025-08-12T17:58:24.091",
+        "exposicion_fin_utc": "2025-08-12T18:05:22.825",
+        "instante_medio_usado_utc": "2025-08-12T18:01:53.458",
+        "posicion_webb": {
+          "xyz_baricentrico_km_del_fits": [
+            115885980.66086951,
+            -91599762.4237324,
+            -39715355.836871825
+          ],
+          "marco_de_efemerides_del_fits": "EME2000",
+          "epoca_de_efemerides_mjd_del_fits": 60899.7513131713,
+          "tipo_de_efemerides_del_fits": "Definitive",
+          "xyz_desde_centro_tierra_km_aprox": [
+            513615.41507837176,
+            -1314836.9127436727,
+            -602199.0128968805
+          ],
+          "distancia_al_centro_tierra_km_aprox": 1534679
+        },
+        "apuntado_punto_de_referencia": {
+          "ascension_recta_grados": 347.5778530696865,
+          "declinacion_grados": 59.953566822618484,
+          "coordenadas_legibles": "23h10m18.7s +59d57m12.8s",
+          "constelacion": "Cepheus"
+        },
+        "metricas_visuales": {
+          "fraccion_pixeles_validos": 0.9806,
+          "variacion_entre_filas": 0.2717,
+          "variacion_entre_columnas": 0.0735,
+          "salto_entre_filas_vecinas": 0.0688,
+          "salto_entre_columnas_vecinas": 0.0643,
+          "brillo_mediano_fondo_png": 26.0,
+          "salto_total": 0.1331,
+          "revisar_por_franjas": false
+        }
+      },
+      "wcsReferencePixelOffsetArcsec": 0.1625420461104125,
+      "webbPositionDeltaKm": 1.6660507878318597e-05,
+      "utcMjdAvgToTdb": "2025-08-12T18:03:02.641",
+      "horizons": {
+        "epochJdTdb": 2460900.2521139006,
+        "source": "JPL Horizons API via Astroquery",
+        "frame": "heliocentric-ecliptic-J2000",
+        "unit": "km",
+        "l2Method": "radial-1,500,000-km-from-Sun estimate",
+        "localMagnification": 20.0,
+        "sceneKey": "orbit.json#scene"
+      },
+      "render": {
+        "result": "PASS",
+        "network": "disabled; render entry uses only JSON and PNG files from this bundle",
+        "node": "v26.13.1",
+        "renderer": "TypeScript 5.9.3",
+        "browser": "158.0.8127.88",
+        "productId": "jw08527002001_03101_00003_nrca1_cal",
+        "mode": "double",
+        "svg": {
+          "bytes": 832575,
+          "sha256": "dd49157cc663ff4365170caf540f1b4869238113158915aef31644fb867d5f17"
+        },
+        "png": {
+          "bytes": 365137,
+          "sha256": "61d7a713d511d731404bc6f95e5931780455aa5720c866826b4aec66099e8a89"
+        },
+        "sourcePhoto": {
+          "bytes": 616166,
+          "sha256": "072e8533fd1a8f6cc5cf890f4dab90506819594de2e37e9f69d913ed6006b2d6"
+        },
+        "bundleMemberDigests": {
+          "photo-1024.png": {
+            "bytes": 616166,
+            "sha256": "072e8533fd1a8f6cc5cf890f4dab90506819594de2e37e9f69d913ed6006b2d6"
+          },
+          "sky.json": {
+            "bytes": 4536,
+            "sha256": "2963658fdc5cbaf4baaffe881c093726b506a3409830201d406b03fb4683cfdc"
+          },
+          "orbit.json": {
+            "bytes": 19482,
+            "sha256": "6bc63567b5d780b5885b37ecdc0b7c871b74db1bb1fd761d3c7e0b1140541c01"
+          },
+          "horizons-inputs.json": {
+            "bytes": 32358,
+            "sha256": "9459f5de8c369036ab17f5bfd3dff46552ea3a8df72d85f616ed37254a602a34"
+          },
+          "licenses/HYG-Database-LICENSE": {
+            "bytes": 422,
+            "sha256": "f404190403d31e0ce7223f4cb7af954485ad88077358330754dc5c892a856627"
+          },
+          "licenses/d3-celestial-LICENSE": {
+            "bytes": 1480,
+            "sha256": "a8c79239001ad4bea243d1796b85084e1fc39309c5c5a663930a1b46320254c6"
+          },
+          "licenses/HYG-Database-README.md": {
+            "bytes": 3930,
+            "sha256": "19d40e234334c781e07d15c8673f930597875aca914db5b5783abb738a1085b7"
+          },
+          "licenses/d3-celestial-data-README.md": {
+            "bytes": 7563,
+            "sha256": "f222a083836789455ed88726efb88ad80fa6a5a50538dd59d4600f2240e5a387"
+          }
+        }
+      },
+      "reproducibility": {
+        "bundleMemberDigestsStable": true,
+        "memberCount": 9,
+        "svgSha256": "dd49157cc663ff4365170caf540f1b4869238113158915aef31644fb867d5f17",
+        "pngSha256": "61d7a713d511d731404bc6f95e5931780455aa5720c866826b4aec66099e8a89",
+        "network": "disabled for both rebuilds and renders",
+        "updatedFromPriorBundleVersion": true
+      },
+      "commands": {
+        "build": "build-real-bundle.py",
+        "verification": "verify-real-fits.py",
+        "render": "render-real-card.cjs (network disabled)"
+      },
+      "buildSummary": "\": \"mast:JWST/product/jw08527002001_03101_00003_nrca1_cal.fits\",\n    \"file\": \"jw08527002001_03101_00003_nrca1_cal.fits\",\n    \"program\": \"08527\",\n    \"mission\": \"JWST\",\n    \"instrument\": \"NIRCAM\",\n    \"target\": \"Maki\",\n    \"detector\": \"NRCA1\",\n    \"filter\": \"F200W\",\n    \"pupil\": \"CLEAR\"\n  },\n  \"image\": {\n    \"key\": \"photo-1024.png\",\n    \"format\": \"image/png\",\n    \"size\": [\n      1024,\n      1024\n    ],\n    \"sourceSize\": [\n      2048,\n      2048\n    ],\n    \"mapping\": \"full-frame-unflipped; Pillow LANCZOS resize\",\n    \"stretch\": \"p1-p99.7-asinh10-v1\"\n  },\n  \"metrics\": {\n    \"validFraction\": 0.9806,\n    \"rowVariation\": 0.2717,\n    \"columnVariation\": 0.0735,\n    \"rowJump\": 0.0688,\n    \"columnJump\": 0.0643,\n    \"totalJump\": 0.1331,\n    \"brightness\": 26.0,\n    \"stripesWarning\": false,\n    \"accepted\": null,\n    \"eligibilityApplied\": false,\n    \"metricsVersion\": \"visual-metrics-1\",\n    \"dqPresent\": true\n  },\n  \"sky\": {\n    \"region\": \"Cepheus\",\n    \"overviewStars\": 0,\n    \"detailStars\": 0,\n    \"overviewSegments\": 11,\n    \"detailSegments\": 0\n  },\n  \"orbit\": {\n    \"epochJdTdb\": 2460900.2521139006,\n    \"earthTrack\": 25,\n    \"moonTrack\": 13,\n    \"webbTrack\": 19\n  },\n  \"sourcePngMatched\": null\n}\n",
+      "visualDecision": {
+        "filterVersion": "visual-filter-1",
+        "accepted": true
+      }
+    }
+  ],
+  "visuallyRejected": [
+    {
+      "month": "2025-02",
+      "product": {
+        "id": "jw05804001001_02101_00001_nrca4_cal",
+        "uri": "mast:JWST/product/jw05804001001_02101_00001_nrca4_cal.fits",
+        "file": "jw05804001001_02101_00001_nrca4_cal.fits",
+        "program": "05804",
+        "mission": "JWST",
+        "instrument": "NIRCAM",
+        "target": "OMC-3",
+        "detector": "NRCA4",
+        "filter": "F212N",
+        "pupil": "CLEAR"
+      },
+      "reason": "visual-filter-1",
+      "accepted": false,
+      "filterVersion": "visual-filter-1",
+      "originalSampler": {
+        "archivo": "jw05804001001_02101_00001_nrca4_cal.fits",
+        "uri_mast": "mast:JWST/product/jw05804001001_02101_00001_nrca4_cal.fits",
+        "telescopio": "JWST",
+        "instrumento": "NIRCAM",
+        "detector": "NRCA4",
+        "filtro": "F212N",
+        "pupila": "CLEAR",
+        "objetivo_catalogado": "OMC-3",
+        "programa": "05804",
+        "exposicion_inicio_utc": "2025-02-13T02:36:48.699",
+        "exposicion_fin_utc": "2025-02-13T02:39:40.487",
+        "instante_medio_usado_utc": "2025-02-13T02:38:14.593",
+        "posicion_webb": {
+          "xyz_baricentrico_km_del_fits": [
+            -121347542.89973602,
+            79639895.28728208,
+            34528724.75157607
+          ],
+          "marco_de_efemerides_del_fits": "EME2000",
+          "epoca_de_efemerides_mjd_del_fits": 60719.10989112269,
+          "tipo_de_efemerides_del_fits": "Definitive",
+          "xyz_desde_centro_tierra_km_aprox": [
+            -602538.4496159852,
+            1250272.204601273,
+            519055.80841110647
+          ],
+          "distancia_al_centro_tierra_km_aprox": 1481773
+        },
+        "apuntado_punto_de_referencia": {
+          "ascension_recta_grados": 83.8246018913689,
+          "declinacion_grados": -5.010623110389261,
+          "coordenadas_legibles": "05h35m17.9s -05d00m38.2s",
+          "constelacion": "Orion"
+        },
+        "metricas_visuales": {
+          "fraccion_pixeles_validos": 0.9837,
+          "variacion_entre_filas": 0.2609,
+          "variacion_entre_columnas": 0.1711,
+          "salto_entre_filas_vecinas": 0.1492,
+          "salto_entre_columnas_vecinas": 0.1044,
+          "brillo_mediano_fondo_png": 118.0,
+          "salto_total": 0.2536,
+          "revisar_por_franjas": true
+        }
+      },
+      "bundle": "docs/evidence/increment-4/monthly-exposures/2025-02/jw05804001001_02101_00001_nrca4_cal"
+    },
+    {
+      "month": "2025-03",
+      "product": {
+        "id": "jw06368049001_03201_00002_nrcalong_cal",
+        "uri": "mast:JWST/product/jw06368049001_03201_00002_nrcalong_cal.fits",
+        "file": "jw06368049001_03201_00002_nrcalong_cal.fits",
+        "program": "06368",
+        "mission": "JWST",
+        "instrument": "NIRCAM",
+        "target": "EGS_cat_2nd_half",
+        "detector": "NRCALONG",
+        "filter": "F277W",
+        "pupil": "CLEAR"
+      },
+      "reason": "visual-filter-1",
+      "accepted": false,
+      "filterVersion": "visual-filter-1",
+      "originalSampler": {
+        "archivo": "jw06368049001_03201_00002_nrcalong_cal.fits",
+        "uri_mast": "mast:JWST/product/jw06368049001_03201_00002_nrcalong_cal.fits",
+        "telescopio": "JWST",
+        "instrumento": "NIRCAM",
+        "detector": "NRCALONG",
+        "filtro": "F277W",
+        "pupila": "CLEAR",
+        "objetivo_catalogado": "",
+        "programa": "06368",
+        "exposicion_inicio_utc": "2025-03-24T08:31:29.918",
+        "exposicion_fin_utc": "2025-03-24T08:47:14.754",
+        "instante_medio_usado_utc": "2025-03-24T08:39:22.336",
+        "posicion_webb": {
+          "xyz_baricentrico_km_del_fits": [
+            -150788946.05196002,
+            -9644777.204120552,
+            -3829976.7370396084
+          ],
+          "marco_de_efemerides_del_fits": "EME2000",
+          "epoca_de_efemerides_mjd_del_fits": 60758.360675185184,
+          "tipo_de_efemerides_del_fits": "Definitive",
+          "xyz_desde_centro_tierra_km_aprox": [
+            -1162512.8153170645,
+            -312616.03446833417,
+            186435.0030464786
+          ],
+          "distancia_al_centro_tierra_km_aprox": 1218164
+        },
+        "apuntado_punto_de_referencia": {
+          "ascension_recta_grados": 215.04042908846645,
+          "declinacion_grados": 52.85943384641434,
+          "coordenadas_legibles": "14h20m09.7s +52d51m34.0s",
+          "constelacion": "Boötes"
+        },
+        "metricas_visuales": {
+          "fraccion_pixeles_validos": 0.9662,
+          "variacion_entre_filas": 0.0573,
+          "variacion_entre_columnas": 0.0675,
+          "salto_entre_filas_vecinas": 0.0596,
+          "salto_entre_columnas_vecinas": 0.0751,
+          "brillo_mediano_fondo_png": 49.0,
+          "salto_total": 0.1347,
+          "revisar_por_franjas": false
+        }
+      },
+      "bundle": "docs/evidence/increment-4/monthly-exposures/2025-03/jw06368049001_03201_00002_nrcalong_cal"
+    },
+    {
+      "month": "2025-09",
+      "product": {
+        "id": "jw06882014001_04101_00002_nrcblong_cal",
+        "uri": "mast:JWST/product/jw06882014001_04101_00002_nrcblong_cal.fits",
+        "file": "jw06882014001_04101_00002_nrcblong_cal.fits",
+        "program": "06882",
+        "mission": "JWST",
+        "instrument": "NIRCAM",
+        "target": "MACSJ0257-2209",
+        "detector": "NRCBLONG",
+        "filter": "F444W",
+        "pupil": "CLEAR"
+      },
+      "reason": "visual-filter-1",
+      "accepted": false,
+      "filterVersion": "visual-filter-1",
+      "originalSampler": {
+        "archivo": "jw06882014001_04101_00002_nrcblong_cal.fits",
+        "uri_mast": "mast:JWST/product/jw06882014001_04101_00002_nrcblong_cal.fits",
+        "telescopio": "JWST",
+        "instrumento": "NIRCAM",
+        "detector": "NRCBLONG",
+        "filtro": "F444W",
+        "pupila": "CLEAR",
+        "objetivo_catalogado": "MACSJ0257-2209",
+        "programa": "06882",
+        "exposicion_inicio_utc": "2025-09-13T17:35:21.288",
+        "exposicion_fin_utc": "2025-09-13T17:42:20.022",
+        "instante_medio_usado_utc": "2025-09-13T17:38:50.655",
+        "posicion_webb": {
+          "xyz_baricentrico_km_del_fits": [
+            149151809.24682558,
+            -23188526.433193486,
+            -9732675.102348574
+          ],
+          "marco_de_efemerides_del_fits": "EME2000",
+          "epoca_de_efemerides_mjd_del_fits": 60931.73530850695,
+          "tipo_de_efemerides_del_fits": "Definitive",
+          "xyz_desde_centro_tierra_km_aprox": [
+            1149798.6941555142,
+            -424567.6963485554,
+            112567.76703665592
+          ],
+          "distancia_al_centro_tierra_km_aprox": 1230840
+        },
+        "apuntado_punto_de_referencia": {
+          "ascension_recta_grados": 44.411368284583126,
+          "declinacion_grados": -22.203160569511425,
+          "coordenadas_legibles": "02h57m38.7s -22d12m11.4s",
+          "constelacion": "Eridanus"
+        },
+        "metricas_visuales": {
+          "fraccion_pixeles_validos": 0.9565,
+          "variacion_entre_filas": 0.0807,
+          "variacion_entre_columnas": 0.0645,
+          "salto_entre_filas_vecinas": 0.0736,
+          "salto_entre_columnas_vecinas": 0.064,
+          "brillo_mediano_fondo_png": 52.0,
+          "salto_total": 0.1376,
+          "revisar_por_franjas": false
+        }
+      },
+      "bundle": "docs/evidence/increment-4/monthly-exposures/2025-09/jw06882014001_04101_00002_nrcblong_cal"
+    }
+  ],
+  "technicalOmissions": [],
+  "summary": {
+    "requiredNewMonths": 3,
+    "acceptedNewMonths": 3,
+    "preservedPreviousMonths": 3,
+    "reportedMonthlyExposures": 6,
+    "visuallyRejectedCandidates": 3,
+    "technicalOmissions": 0,
+    "distinctMonthsIncludingReference": 7,
+    "monthsWithoutEligibleExposure": [],
+    "status": "PASS"
+  }
+}

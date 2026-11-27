@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "resolved-sky-1",
+  "scene": {
+    "center": [
+      276.87266043303305,
+      -11.480049055226827
+    ],
+    "footprint": [
+      [
+        276.8635728251761,
+        -11.489003275501565
+      ],
+      [
+        276.8634280709323,
+        -11.471073646489234
+      ],
+      [
+        276.88174715883554,
+        -11.471187182018726
+      ],
+      [
+        276.8817931744371,
+        -11.488868270713407
+      ]
+    ],
+    "figureEdges": [
+      [
+        [
+          278.8018,
+          -8.2441
+        ],
+        [
+          281.79359999999997,
+          -4.7479
+        ]
+      ],
+      [
+        [
+          281.79359999999997,
+          -4.7479
+        ],
+        [
+          280.5684,
+          -9.0525
+        ]
+      ],
+      [
+        [
+          280.5684,
+          -9.0525
+        ],
+        [
+          277.2994,
+          -14.5658
+        ]
+      ],
+      [
+        [
+          277.2994,
+          -14.5658
+        ],
+        [
+          278.8018,
+          -8.2441
+        ]
+      ]
+    ],
+    "figureStars": [
+      [
+        277.2994,
+        -14.5658
+      ],
+      [
+        278.8018,
+        -8.2441
+      ],
+      [
+        280.5684,
+        -9.0525
+      ],
+      [
+        281.7936,
+        -4.7479
+      ]
+    ],
+    "overviewStars": [],
+    "detail": {
+      "center": [
+        277.0137430588382,
+        -12.50870907424776
+      ],
+      "sizeDeg": [
+        5.0,
+        5.0
+      ],
+      "corners": [
+        [
+          279.59946091006776,
+          -14.994116423745115
+        ],
+        [
+          274.42802520760864,
+          -14.994116423745115
+        ],
+        [
+          274.47757163093,
+          -9.999103335390457
+        ],
+        [
+          279.5499144867464,
+          -9.999103335390455
+        ]
+      ],
+      "stars": [],
+      "segments": [
+        [
+          [
+            280.5684,
+            -9.0525
+          ],
+          [
+            277.2994,
+            -14.5658
+          ]
+        ],
+        [
+          [
+            277.2994,
+            -14.5658
+          ],
+          [
+            278.8018,
+            -8.2441
+          ]
+        ]
+      ]
+    }
+  },
+  "region": "Scutum",
+  "abbreviation": "Sct",
+  "reference": [
+    276.87266080602626,
+    -11.48004877709864
+  ],
+  "centerOffsetArcsec": 0.0016535262836658517,
+  "catalog": {
+    "stars": {
+      "source": "HYG v4.1 (audited, not rendered in this card)",
+      "revision": "3bf37f4b2d5460e1278286320d1d62fab9b493c1",
+      "sha256": "2b4d54f0a83db866c6d2eda76cd78bbcc713cc14e1ce8812093fb3ee586df673",
+      "sourceEpoch": "J2000.0",
+      "frame": "ICRS",
+      "magnitude": "apparent visual",
+      "selected": 0,
+      "detailSelected": 0,
+      "displayPolicy": "constellation figure only; no contextual catalog stars",
+      "license": "CC BY-SA 4.0"
+    },
+    "figures": {
+      "source": "d3-celestial constellations.lines.json",
+      "revision": "7e720a3de062059d4c5400a379146a601d9010e0",
+      "sha256": "294f66bef5d5cf50b1e17f16d2efa1d97a15131612c68dd935adef6e7373e13c",
+      "sourceCoordinates": "RA degrees signed about zero; Dec degrees",
+      "selectedFeatures": [
+        "Sct"
+      ],
+      "detailFeatures": [
+        "Sct"
+      ],
+      "license": "BSD-3-Clause"
+    },
+    "constellationClassifier": {
+      "implementation": "astropy.coordinates.get_constellation",
+      "version": "8.0.3",
+      "reference": "Roman 1987 / Delporte B1875"
+    }
+  }
+}

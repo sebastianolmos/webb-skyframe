@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "resolved-sky-1",
+  "scene": {
+    "center": [
+      3.593600668298072,
+      -30.462457007299523
+    ],
+    "footprint": [
+      [
+        3.599017944732135,
+        -30.450615921488385
+      ],
+      [
+        3.607226106322576,
+        -30.46706952908804
+      ],
+      [
+        3.5882129987339546,
+        -30.474116500087845
+      ],
+      [
+        3.5800222066065195,
+        -30.45792722187667
+      ]
+    ],
+    "figureEdges": [
+      [
+        [
+          14.6515,
+          -29.3574
+        ],
+        [
+          357.2314,
+          -28.1303
+        ]
+      ],
+      [
+        [
+          357.2314,
+          -28.1303
+        ],
+        [
+          349.706,
+          -32.532
+        ]
+      ],
+      [
+        [
+          349.706,
+          -32.532
+        ],
+        [
+          353.2427,
+          -37.8183
+        ]
+      ]
+    ],
+    "figureStars": [
+      [
+        14.6515,
+        -29.3574
+      ],
+      [
+        349.706,
+        -32.532
+      ],
+      [
+        353.2427,
+        -37.8183
+      ],
+      [
+        357.2314,
+        -28.1303
+      ]
+    ],
+    "overviewStars": [],
+    "detail": {
+      "center": [
+        1.4405227901573434,
+        -29.718858212870177
+      ],
+      "sizeDeg": [
+        5.0,
+        5.0
+      ],
+      "corners": [
+        [
+          4.39199260992696,
+          -32.184563709442266
+        ],
+        [
+          358.4890529703877,
+          -32.184563709442266
+        ],
+        [
+          358.6323577750514,
+          -27.19086622962613
+        ],
+        [
+          4.248687805263299,
+          -27.19086622962613
+        ]
+      ],
+      "stars": [],
+      "segments": []
+    }
+  },
+  "region": "Sculptor",
+  "abbreviation": "Scl",
+  "reference": [
+    3.593611672883801,
+    -30.462443224262156
+  ],
+  "centerOffsetArcsec": 0.06023386392079131,
+  "catalog": {
+    "stars": {
+      "source": "HYG v4.1 (audited, not rendered in this card)",
+      "revision": "3bf37f4b2d5460e1278286320d1d62fab9b493c1",
+      "sha256": "2b4d54f0a83db866c6d2eda76cd78bbcc713cc14e1ce8812093fb3ee586df673",
+      "sourceEpoch": "J2000.0",
+      "frame": "ICRS",
+      "magnitude": "apparent visual",
+      "selected": 0,
+      "detailSelected": 0,
+      "displayPolicy": "constellation figure only; no contextual catalog stars",
+      "license": "CC BY-SA 4.0"
+    },
+    "figures": {
+      "source": "d3-celestial constellations.lines.json",
+      "revision": "7e720a3de062059d4c5400a379146a601d9010e0",
+      "sha256": "294f66bef5d5cf50b1e17f16d2efa1d97a15131612c68dd935adef6e7373e13c",
+      "sourceCoordinates": "RA degrees signed about zero; Dec degrees",
+      "selectedFeatures": [
+        "Scl"
+      ],
+      "detailFeatures": [],
+      "license": "BSD-3-Clause"
+    },
+    "constellationClassifier": {
+      "implementation": "astropy.coordinates.get_constellation",
+      "version": "8.0.3",
+      "reference": "Roman 1987 / Delporte B1875"
+    }
+  }
+}

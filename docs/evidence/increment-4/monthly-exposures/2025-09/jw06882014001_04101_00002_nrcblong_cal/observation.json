@@ -1,0 +1,194 @@
+{
+  "schemaVersion": "real-exposure-1",
+  "versions": {
+    "data": "real-sky-1",
+    "render": "real-card-1",
+    "filter": "visual-metrics-1",
+    "catalog": "local-evidence-only"
+  },
+  "product": {
+    "id": "jw06882014001_04101_00002_nrcblong_cal",
+    "uri": "mast:JWST/product/jw06882014001_04101_00002_nrcblong_cal.fits",
+    "file": "jw06882014001_04101_00002_nrcblong_cal.fits",
+    "program": "06882",
+    "mission": "JWST",
+    "instrument": "NIRCAM",
+    "target": "MACSJ0257-2209",
+    "detector": "NRCBLONG",
+    "filter": "F444W",
+    "pupil": "CLEAR"
+  },
+  "time": {
+    "begin": "2025-09-13T17:35:21.288Z",
+    "middle": "2025-09-13T17:38:50.655Z",
+    "end": "2025-09-13T17:42:20.022Z",
+    "method": "MJD-AVG UTC from SCI header",
+    "queryEpochJdTdb": 2460932.23610923
+  },
+  "provenance": {
+    "mastUri": "mast:JWST/product/jw06882014001_04101_00002_nrcblong_cal.fits",
+    "fitsSha256": "d7156e9ea2bf37f81a4ea33722a16ec394c522e1d7ec6a65f878e3ea7ba8513c",
+    "fitsBytes": 117576000,
+    "sourcePngSha256": null,
+    "rebuiltPngMatchedSource": null,
+    "pipelineVersion": "3.0.0",
+    "crdsContext": "jwst_1584.pmap",
+    "targetNameSource": "FITS TARGNAME",
+    "hygRevision": "3bf37f4b2d5460e1278286320d1d62fab9b493c1",
+    "constellationRevision": "7e720a3de062059d4c5400a379146a601d9010e0",
+    "horizonsRetrievedUtc": "2026-11-27T12:06:33+00:00",
+    "credit": "NASA/ESA/CSA James Webb Space Telescope; observing program 06882; Mikulski Archive for Space Telescopes (MAST) at STScI."
+  },
+  "fitsOrbit": {
+    "xyz": [
+      149151809.24682558,
+      -23188526.433193486,
+      -9732675.102348574
+    ],
+    "frame": "EME2000",
+    "epochMjd": 60931.73530850695,
+    "epochScale": "UTC",
+    "type": "Definitive"
+  },
+  "image": {
+    "key": "photo-1024.png",
+    "format": "image/png",
+    "size": [
+      1024,
+      1024
+    ],
+    "sourceSize": [
+      2048,
+      2048
+    ],
+    "mapping": "full-frame-unflipped; Pillow LANCZOS resize",
+    "stretch": "p1-p99.7-asinh10-v1"
+  },
+  "metrics": {
+    "validFraction": 0.9565,
+    "rowVariation": 0.0807,
+    "columnVariation": 0.0645,
+    "rowJump": 0.0736,
+    "columnJump": 0.064,
+    "totalJump": 0.1376,
+    "brightness": 52.0,
+    "stripesWarning": false,
+    "accepted": null,
+    "eligibilityApplied": false,
+    "metricsVersion": "visual-metrics-1",
+    "dqPresent": true
+  },
+  "sky": {
+    "center": [
+      44.4113712452804,
+      -22.20316134398959
+    ],
+    "corners": [
+      [
+        44.43461129256254,
+        -22.189128840323487
+      ],
+      [
+        44.42632472557009,
+        -22.224636089443933
+      ],
+      [
+        44.38844877819416,
+        -22.216799689036407
+      ],
+      [
+        44.39626411498916,
+        -22.182088023123022
+      ]
+    ],
+    "reference": [
+      44.411368284583126,
+      -22.203160569511425
+    ],
+    "region": "Eridanus",
+    "abbreviation": "Eri",
+    "figureKey": "sky.json#scene.figureEdges",
+    "starsKey": "sky.json#scene.overviewStars",
+    "detailStars": 0,
+    "overviewStars": 0,
+    "detailSegments": 2,
+    "detail": {
+      "center": [
+        44.8041285936592,
+        -22.67791512148924
+      ],
+      "size": [
+        5.0,
+        5.0
+      ],
+      "corners": [
+        [
+          47.56357470354909,
+          -25.152330953087276
+        ],
+        [
+          42.04468248376931,
+          -25.15233095308728
+        ],
+        [
+          42.14342038976484,
+          -20.15791414598532
+        ],
+        [
+          47.464836797553545,
+          -20.15791414598532
+        ]
+      ]
+    }
+  },
+  "orbit": {
+    "epochJdTdb": 2460932.23610923,
+    "source": "JPL Horizons API via Astroquery",
+    "frame": "heliocentric-ecliptic-J2000",
+    "unit": "km",
+    "l2Method": "radial-1,500,000-km-from-Sun estimate",
+    "localMagnification": 20.0,
+    "sceneKey": "orbit.json#scene"
+  },
+  "processors": {
+    "python": "3.13.5",
+    "astropy": "8.0.3",
+    "astroquery": "0.4.11",
+    "gwcs": "1.0.3",
+    "pillow": "13.0.0"
+  },
+  "members": {
+    "photo-1024.png": {
+      "bytes": 743667,
+      "sha256": "5b11205a2f9004379a25533110942ea5fe9a536e2b31d8027e013e7ad45acced"
+    },
+    "sky.json": {
+      "bytes": 7984,
+      "sha256": "89ba5b0d9553f3a0567920bad97e6f65f166482415e2e6b01f7ab9302e8ee976"
+    },
+    "orbit.json": {
+      "bytes": 19410,
+      "sha256": "7f54e494a15f3e3bfe84c7bdf2d72770ae1796ee2d82375effd703d5b7e9e4ff"
+    },
+    "horizons-inputs.json": {
+      "bytes": 32138,
+      "sha256": "22bc30b9dad159d4cc4ed6078f6a4f89c20b1fd39927a112242a66c147422ebc"
+    },
+    "licenses/HYG-Database-LICENSE": {
+      "bytes": 422,
+      "sha256": "f404190403d31e0ce7223f4cb7af954485ad88077358330754dc5c892a856627"
+    },
+    "licenses/d3-celestial-LICENSE": {
+      "bytes": 1480,
+      "sha256": "a8c79239001ad4bea243d1796b85084e1fc39309c5c5a663930a1b46320254c6"
+    },
+    "licenses/HYG-Database-README.md": {
+      "bytes": 3930,
+      "sha256": "19d40e234334c781e07d15c8673f930597875aca914db5b5783abb738a1085b7"
+    },
+    "licenses/d3-celestial-data-README.md": {
+      "bytes": 7563,
+      "sha256": "f222a083836789455ed88726efb88ad80fa6a5a50538dd59d4600f2240e5a387"
+    }
+  }
+}

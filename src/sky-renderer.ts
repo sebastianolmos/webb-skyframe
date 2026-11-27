@@ -1,5 +1,18 @@
 import type { SkyFixture, SkyPoint, SkySegment, SkyStar } from "./sky-fixtures";
 
+/** Resolved spherical inputs required by the pure celestial-panel renderer. */
+export type SkyPanelScene = Pick<SkyFixture, "center" | "footprint" | "figureEdges" | "overviewStars" | "detail"> &
+  Partial<Pick<SkyFixture, "id">> & { figureStars?: readonly SkyPoint[] };
+
+/** Data-driven labels keep the production panel independent of synthetic fixture IDs. */
+export type SkyPanelDisplay = {
+  heading?: string;
+  coordinateCaption?: string;
+  symbolicPointingSquare?: boolean;
+  constellationOverviewZoom?: number;
+  pointingReferenceSquareSize?: number;
+};
+
 type V3 = readonly [number, number, number];
 type P2 = readonly [number, number];
 type Bounds = { minX: number; minY: number; maxX: number; maxY: number };
@@ -27,7 +40,7 @@ function basis(center: SkyPoint): { c: V3; east: V3; north: V3 } {
   return { c, east, north };
 }
 
-function projectionCenter(fixture: SkyFixture): SkyPoint {
+function projectionCenter(fixture: SkyPanelScene): SkyPoint {
   const points: SkyPoint[] = [fixture.center, ...fixture.footprint, ...fixture.figureEdges.flat(), ...fixture.overviewStars.map(([ra, dec]) => [ra, dec] as const), ...fixture.detail.corners];
   const mean = points.reduce<V3>((sum, p) => {
     const v = vector(p);
@@ -56,10 +69,10 @@ function bounds(points: readonly P2[]): Bounds {
   return points.reduce<Bounds>((b, [x, y]) => ({ minX: Math.min(b.minX, x), minY: Math.min(b.minY, y), maxX: Math.max(b.maxX, x), maxY: Math.max(b.maxY, y) }), { minX: Infinity, minY: Infinity, maxX: -Infinity, maxY: -Infinity });
 }
 
-function mapToRect(p: P2, b: Bounds, x: number, y: number, width: number, height: number, pad = 10): P2 {
+function mapToRect(p: P2, b: Bounds, x: number, y: number, width: number, height: number, pad = 10, zoom = 1): P2 {
   const sx = (width - 2 * pad) / Math.max(b.maxX - b.minX, 1e-12);
   const sy = (height - 2 * pad) / Math.max(b.maxY - b.minY, 1e-12);
-  const scale = Math.min(sx, sy);
+  const scale = Math.min(sx, sy) * zoom;
   return [x + width / 2 + (p[0] - (b.minX + b.maxX) / 2) * scale, y + height / 2 + (p[1] - (b.minY + b.maxY) / 2) * scale];
 }
 
@@ -135,7 +148,14 @@ function starMarks(stars: readonly SkyStar[], project: (point: SkyPoint) => P2 |
   }).join("");
 }
 
-function overviewContent(fixture: SkyFixture, x: number, y: number, width: number, height: number, includeDetailOutline: boolean): { svg: string; outline: P2[]; shortSideAtReference: number } {
+function figureStarMarks(points: readonly SkyPoint[] | undefined, project: (point: SkyPoint) => P2 | null, radius: number): string {
+  return (points ?? []).map((point) => {
+    const p = project(point);
+    return p ? `<circle cx="${fmt(p[0])}" cy="${fmt(p[1])}" r="${radius}" fill="#fff" stroke="#d8e3ff" stroke-width=".65"/>` : "";
+  }).join("");
+}
+
+function overviewContent(fixture: SkyPanelScene, x: number, y: number, width: number, height: number, includeDetailOutline: boolean, symbolicFootprint = false, zoom = 1): { svg: string; outline: P2[]; shortSideAtReference: number } {
   const center = projectionCenter(fixture), frame = basis(center);
   const project = (p: SkyPoint) => stereographic(p, frame);
   const allPoints = [...fixture.footprint, ...fixture.figureEdges.flat(), ...fixture.detail.corners, ...fixture.overviewStars.map(([ra, dec]) => [ra, dec] as const)];
@@ -144,7 +164,7 @@ function overviewContent(fixture: SkyFixture, x: number, y: number, width: numbe
   const fieldPoints = fixture.footprint.map(project).filter((p): p is P2 => p !== null);
   const shortSide = minOrientedShortSide(fieldPoints);
   const referenceScale = Math.min(540 / Math.max(b.maxX - b.minX, 1e-12), 250 / Math.max(b.maxY - b.minY, 1e-12));
-  const toScreen = (p: P2) => mapToRect(p, b, x, y, width, height, 9);
+  const toScreen = (p: P2) => mapToRect(p, b, x, y, width, height, 9, zoom);
   const outline = fixture.detail.corners.map(project).filter((p): p is P2 => p !== null).map(toScreen);
   const footprint = pathFromSky(fixture.footprint, frame, toScreen, true);
   const edges = fixture.figureEdges.map((edge) => {
@@ -153,14 +173,19 @@ function overviewContent(fixture: SkyFixture, x: number, y: number, width: numbe
   }).join("");
   const outlineSvg = includeDetailOutline && outline.length === 4 ? `<path d="${outline.map(([px, py], i) => `${i ? "L" : "M"}${fmt(px)},${fmt(py)}`).join(" ")} Z" fill="#7a8799" fill-opacity=".08" stroke="#e4d6ff" stroke-dasharray="4 3" stroke-width="1.4"/>` : "";
   const stars = starMarks(fixture.overviewStars, (p) => { const q = project(p); return q ? toScreen(q) : null; }, 2.4);
+  const figureStars = figureStarMarks(fixture.figureStars, (p) => { const q = project(p); return q ? toScreen(q) : null; }, 3.2);
+  const selectionSvg = includeDetailOutline && outline.length === 4
+    ? `<path d="${outline.map(([px, py], i) => `${i ? "L" : "M"}${fmt(px)},${fmt(py)}`).join(" ")} Z" fill="#a976e8" fill-opacity=".08" stroke="#bd83ff" stroke-width="1.7"/>`
+    : outlineSvg;
+  const trueFootprint = symbolicFootprint ? "" : `<path d="${footprint}" fill="#a976e8" fill-opacity=".18" stroke="#bd83ff" stroke-width="2"/>`;
   return {
-    svg: `<rect x="${x}" y="${y}" width="${width}" height="${height}" rx="5" fill="#090d18"/><g fill="none" stroke="#8999be" stroke-opacity=".82" stroke-width="1.4">${edges}</g>${stars}<path d="${footprint}" fill="#a976e8" fill-opacity=".18" stroke="#bd83ff" stroke-width="2"/>${outlineSvg}`,
+    svg: `<rect x="${x}" y="${y}" width="${width}" height="${height}" rx="5" fill="#090d18"/>${selectionSvg}<g fill="none" stroke="#8999be" stroke-opacity=".82" stroke-width="1.4">${edges}</g>${stars}${figureStars}${trueFootprint}`,
     outline,
     shortSideAtReference: shortSide * referenceScale,
   };
 }
 
-function detailContent(fixture: SkyFixture, x: number, y: number, width: number, height: number): string {
+function detailContent(fixture: SkyPanelScene, x: number, y: number, width: number, height: number, symbolicFootprint = false, referenceSquareSize = 30): string {
   const frame = basis(fixture.detail.center);
   const windowWidth = Math.tan(rad(fixture.detail.sizeDeg[0] / 2));
   const windowHeight = Math.tan(rad(fixture.detail.sizeDeg[1] / 2));
@@ -170,12 +195,21 @@ function detailContent(fixture: SkyFixture, x: number, y: number, width: number,
   const toScreen = ([eastLeft, northUp]: P2): P2 => [x + width / 2 + eastLeft * scale, y + height / 2 + northUp * scale];
   const field = fixture.footprint.map((p) => gnomonic(p, frame)).filter((p): p is P2 => p !== null).map(toScreen);
   const footprint = field.length === 4 ? `${field.map(([px, py], i) => `${i ? "L" : "M"}${fmt(px)},${fmt(py)}`).join(" ")} Z` : "";
+  const center = gnomonic(fixture.center, frame);
+  const locator = symbolicFootprint && center
+    ? (() => { const [cx, cy] = toScreen(center); return `<rect x="${fmt(cx - referenceSquareSize / 2)}" y="${fmt(cy - referenceSquareSize / 2)}" width="${referenceSquareSize}" height="${referenceSquareSize}" fill="#a976e8" fill-opacity=".35" stroke="#ead8ff" stroke-width="1.3"/>`; })()
+    : "";
   const segments = fixture.detail.segments.map((segment) => segmentPath(segment, frame, toScreen, clip)).filter(Boolean).map((d) => `<path d="${d}" fill="none" stroke="#9daecc" stroke-width="1.3"/>`).join("");
   const stars = starMarks(fixture.detail.stars, (point) => {
     const p = gnomonic(point, frame);
     if (!p || p[0] < clip.minX || p[0] > clip.maxX || p[1] < clip.minY || p[1] > clip.maxY) return null;
     return toScreen(p);
   }, 3.2);
+  const figureStars = figureStarMarks(fixture.figureStars, (point) => {
+    const p = gnomonic(point, frame);
+    if (!p || p[0] < clip.minX || p[0] > clip.maxX || p[1] < clip.minY || p[1] > clip.maxY) return null;
+    return toScreen(p);
+  }, 3.8);
   const barPx = Math.min(38, width * 0.2);
   const barX = x + width - barPx - 13;
   const barY = y + height - 17;
@@ -197,21 +231,29 @@ function detailContent(fixture: SkyFixture, x: number, y: number, width: number,
   ];
   const angleDeg = Math.atan2(Math.hypot(...cross), dot(barStart, barEnd)) * 180 / Math.PI;
   const label = angleDeg >= 1 ? `${angleDeg.toFixed(1)}°` : `${(angleDeg * 60).toFixed(1)}′`;
-  return `<rect x="${x}" y="${y}" width="${width}" height="${height}" rx="5" fill="#090d18"/><path d="${footprint}" fill="#a976e8" fill-opacity=".2" stroke="#bd83ff" stroke-width="1.8"/>${segments}${stars}<path d="M${fmt(barX)},${fmt(barY)} h${fmt(barPx)}" stroke="#f3f4f8" stroke-width="2"/><text x="${fmt(x + width - 13)}" y="${fmt(y + height - 21)}" fill="#d8deeb" text-anchor="end" font-size="8" font-family="Arial,sans-serif">${label}</text>`;
+  const trueFootprint = symbolicFootprint ? "" : `<path d="${footprint}" fill="#a976e8" fill-opacity=".2" stroke="#bd83ff" stroke-width="1.8"/>`;
+  return `<rect x="${x}" y="${y}" width="${width}" height="${height}" rx="5" fill="#090d18"/>${trueFootprint}${segments}${figureStars}${stars}${locator}<path d="M${fmt(barX)},${fmt(barY)} h${fmt(barPx)}" stroke="#f3f4f8" stroke-width="2"/><text x="${fmt(x + width - 13)}" y="${fmt(y + height - 21)}" fill="#d8deeb" text-anchor="end" font-size="8" font-family="Arial,sans-serif">${label}</text>`;
 }
 
-export function renderSkyPanel(fixture: SkyFixture): string {
+export function renderSkyPanel(fixture: SkyPanelScene, display: SkyPanelDisplay = {}): string {
   const panelX = 578, panelY = 18, panelW = 484, panelH = 260;
-  const overview = overviewContent(fixture, 594, 59, 452, 198, false);
+  const zoom = display.constellationOverviewZoom ?? 1;
+  const referenceSquareSize = display.pointingReferenceSquareSize ?? 30;
+  if (!Number.isFinite(zoom) || zoom <= 0) throw new RangeError("Constellation overview zoom must be a positive finite value");
+  if (!Number.isFinite(referenceSquareSize) || referenceSquareSize <= 0) throw new RangeError("Pointing reference square size must be a positive finite value");
+  const overview = overviewContent(fixture, 594, 59, 452, 198, false, display.symbolicPointingSquare, zoom);
   const mode = overview.shortSideAtReference >= 12 ? "single" : "double";
-  const header = `<rect x="${panelX}" y="${panelY}" width="${panelW}" height="${panelH}" rx="12" fill="#101523" stroke="#343c50"/><text x="598" y="46" fill="#f3f4f8" font-size="15" font-weight="700" font-family="Arial,sans-serif">${xml(fixture.id)} · ${mode === "single" ? "SKY OVERVIEW" : "SKY OVERVIEW + DETAIL"}</text>`;
+  const heading = display.heading ?? fixture.id ?? "Sky field";
+  const coordinateCaption = display.coordinateCaption ?? (fixture.id ? "synthetic ICRS" : "ICRS");
+  const headerLabel = mode === "single" ? "SKY OVERVIEW" : "CONSTELLATION + LOCAL REFERENCE";
+  const header = `<rect x="${panelX}" y="${panelY}" width="${panelW}" height="${panelH}" rx="12" fill="#101523" stroke="#343c50"/><text x="598" y="46" fill="#f3f4f8" font-size="15" font-weight="700" font-family="Arial,sans-serif">${xml(heading)} · ${headerLabel}</text>`;
   if (mode === "single") {
-    return `${header}${overview.svg}<text x="1040" y="269" text-anchor="end" fill="#8992a2" font-size="8" font-family="Arial,sans-serif">north ↑ · east ← · synthetic ICRS</text>`;
+    return `${header}${overview.svg}<text x="1040" y="269" text-anchor="end" fill="#8992a2" font-size="8" font-family="Arial,sans-serif">north ↑ · east ← · ${xml(coordinateCaption)}</text>`;
   }
-  const left = overviewContent(fixture, 594, 63, 185, 192, true);
+  const left = overviewContent(fixture, 594, 63, 185, 192, true, display.symbolicPointingSquare, zoom);
   const rightX = 806, rightY = 63, rightW = 240, rightH = 192;
-  const overviewLabel = `<text x="686" y="76" text-anchor="middle" fill="#b7c2d7" font-size="11" font-family="Arial,sans-serif">OVERVIEW</text>`;
-  const detailLabel = `<text x="926" y="75" text-anchor="middle" fill="#b7c2d7" font-size="9" font-family="Arial,sans-serif">DETAIL · NORTH UP / EAST LEFT</text>`;
+  const overviewLabel = `<text x="686" y="76" text-anchor="middle" fill="#b7c2d7" font-size="11" font-family="Arial,sans-serif">CONSTELLATION</text>`;
+  const detailLabel = `<text x="926" y="75" text-anchor="middle" fill="#b7c2d7" font-size="9" font-family="Arial,sans-serif">LOCAL REFERENCE · NORTH UP / EAST LEFT</text>`;
   let connector = "";
   if (left.outline.length === 4) {
     const rightEdge = [...left.outline].sort((a, b) => b[0] - a[0]).slice(0, 2);
@@ -220,5 +262,6 @@ export function renderSkyPanel(fixture: SkyFixture): string {
     connector = `<path d="M${fmt(upper[0])},${fmt(upper[1])} L${rightX},${rightY + 20} M${fmt(lower[0])},${fmt(lower[1])} L${rightX},${rightY + rightH - 20}" fill="none" stroke="#e4d6ff" stroke-opacity=".72" stroke-width="1"/>`;
   }
   const map = left.svg;
-  return `${header}${map}${connector}${detailContent(fixture, rightX, rightY + 14, rightW, rightH - 14)}${overviewLabel}${detailLabel}<text x="598" y="269" fill="#8992a2" font-size="8" font-family="Arial,sans-serif">north ↑ · east ← · synthetic ICRS</text>`;
+  const locatorNote = display.symbolicPointingSquare ? " · detail square not to scale" : "";
+  return `${header}${map}${connector}${detailContent(fixture, rightX, rightY + 14, rightW, rightH - 14, display.symbolicPointingSquare, referenceSquareSize)}${overviewLabel}${detailLabel}<text x="598" y="269" fill="#8992a2" font-size="8" font-family="Arial,sans-serif">north ↑ · east ← · ${xml(coordinateCaption + locatorNote)}</text>`;
 }
